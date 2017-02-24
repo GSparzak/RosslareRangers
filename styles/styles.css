@@ -1,37 +1,20 @@
 /*OVERALL*/
 
-body {
-    background-color: #ffcc22;
-}
-
 .wrapper {
-    float: left;
     margin: 0 auto;
     /*min-width: 800px;*/
     width: 70vw;
-    height: 100vh;
-    background-color: midnightblue;
-    background-size: cover;
+    height: 100%;
+    position: relative;
 }
 
-.left {
-    float: left;
-    width: 15vw;
-    height: 100vh;
-    background-image: url("../images/yellow_left.jpg");
-    background-size: cover;
-}
-
-.right {
-    float: left;
-    width: 15vw;
-    height: 100vh;
-    background-image: url("../images/yellow_right.jpg");
-    background-size: cover;
-}
-
-body, .left, .right {
-    overflow: hidden;
+.content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    /*height: auto;*/
+    transform: translate(0, -50%);
 }
 
 .text {
@@ -43,14 +26,18 @@ body, .left, .right {
 
 header {
     height: 8vh;
+    background-color: midnightblue;
+    border-bottom: 3px solid #ffcc22;
+    box-sizing: border-box;
 }
 
 .crest {
     position: relative;
     top: 10px;
-    left: 80px;
+    left: 0;
     width: 140px;
     height: 140px;
+    z-index: 10;
 }
 
 .image {
@@ -60,7 +47,7 @@ header {
     background-size: cover;
     background-position: center;
     width:  100%;
-    height: 40vh;
+    height: 50vh;
     border-bottom: 3px solid #ffcc22;
     border-top: 3px solid #ffcc22;
 }
@@ -81,23 +68,45 @@ li {
 
 /*MAIN*/
 
+main {
+    height: 92vh;
+    padding: 0;
+    background-color: midnightblue;
+    background: url(../images/wexford_cup_1989.jpg) center center;
+    background-size: cover;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.shade {
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.7;
+}
+
+.text {
+    opacity: 1;
+}
+
 main > div:nth-child(2) {
-    height: 50vh;
+    height: 42vh;
     overflow-y: auto;
 }
 
-h1 {
+h2 {
     text-align: center;
     font-size: 1.8em;
-    margin-top: 4vh;
+    padding-top: 2vh;
     margin-bottom: 2vh;
 }
 
 p {
     font-size: 1.3em;
-    margin: 0 5vw;
-    padding: 15px 20px;
+    margin: 0 ;
+    padding: 15px 0;
     line-height: 130%;
+    text-align: justify;
 }
 
 a, a:link, a:hover, a:visited {
@@ -111,11 +120,6 @@ a:hover {
     border-bottom: 2px solid #ffcc22;
 }
 
-
-
-#descr {
-    margin-top: 4vh;
-}
 
 /*TEAMS*/
 
@@ -143,17 +147,20 @@ p.teams_text {
 /*FOOTER*/
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
+    left: 0;
     background-color: black;
     font-size: 0.7em;
     padding: 5px 0;
     height: 10px;
     min-width: 1000px;
-    width: 70vw;
+    width: 100vw;
+    border-top: 1px solid #fc2;
+    /*border-bottom: 1px solid #fc2;*/
 }
 
 .info {
     color: white;
-    margin-left: 5px;
+    margin-left: 15px;
 }
