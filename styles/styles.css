@@ -1,4 +1,4 @@
-
+/*OVERALL*/
 
 body {
     background-color: #ffcc22;
@@ -10,7 +10,7 @@ body {
     /*min-width: 800px;*/
     width: 70vw;
     height: 100vh;
-    background-color: darkblue;
+    background-color: midnightblue;
     background-size: cover;
 }
 
@@ -33,6 +33,13 @@ body {
 body, .left, .right {
     overflow: hidden;
 }
+
+.text {
+    color: #ffcc22;
+    font-family: 'Lato', sans-serif;
+}
+
+/*HEADER*/
 
 header {
     height: 8vh;
@@ -67,20 +74,23 @@ li {
     display: inline;
     color: #ffcc22;
     padding: 5px 10px;
-    border: 2px solid #ffcc22;
-    border-radius: 30px;
+    /*border: 2px solid #ffcc22;*/
+    /*border-radius: 30px;*/
+    cursor: pointer;
 }
 
-.text {
-    color: #ffcc22;
-    font-family: 'Lato', sans-serif;
+/*MAIN*/
+
+main > div:nth-child(2) {
+    height: 50vh;
+    overflow-y: auto;
 }
 
 h1 {
     text-align: center;
     font-size: 1.8em;
     margin-top: 4vh;
-    margin-bottom: 3vh;
+    margin-bottom: 2vh;
 }
 
 p {
@@ -94,7 +104,43 @@ a, a:link, a:hover, a:visited {
     color: #ffcc22;
     font-family: 'Lato', sans-serif;
     text-decoration: none;
+    /*padding: 5px;*/
 }
+
+a:hover {
+    border-bottom: 2px solid #ffcc22;
+}
+
+
+
+#descr {
+    margin-top: 4vh;
+}
+
+/*TEAMS*/
+
+.teams {
+    display:flex;
+    justify-content: space-around;
+}
+
+h3 {
+    font-size: 1.2em;
+    margin: 15px;
+}
+
+.teams_text {
+    color: #ffcc22;
+    font-family: 'Lato', sans-serif;
+}
+
+p.teams_text {
+    font-size: 1em;
+    margin: 0;
+    padding: 2px;
+}
+
+/*FOOTER*/
 
 footer {
     position: absolute;
@@ -108,10 +154,6 @@ footer {
 }
 
 .info {
-     color: white;
-     margin-left: 5px;
- }
-
-#descr {
-    margin-top: 8vh;
+    color: white;
+    margin-left: 5px;
 }
