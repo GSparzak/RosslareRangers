@@ -1,4 +1,14 @@
-/*OVERALL*/
+/*
+
+ ######  ##     ##    ###    ########  ######## ########
+##    ## ##     ##   ## ##   ##     ## ##       ##     ##
+##       ##     ##  ##   ##  ##     ## ##       ##     ##
+ ######  ######### ##     ## ########  ######   ##     ##
+      ## ##     ## ######### ##   ##   ##       ##     ##
+##    ## ##     ## ##     ## ##    ##  ##       ##     ##
+ ######  ##     ## ##     ## ##     ## ######## ########
+
+*/
 
 .wrapper {
     margin: 0 auto;
@@ -22,7 +32,17 @@
     font-family: 'Lato', sans-serif;
 }
 
-/*HEADER*/
+/*
+
+##     ## ########    ###    ########  ######## ########
+##     ## ##         ## ##   ##     ## ##       ##     ##
+##     ## ##        ##   ##  ##     ## ##       ##     ##
+######### ######   ##     ## ##     ## ######   ########
+##     ## ##       ######### ##     ## ##       ##   ##
+##     ## ##       ##     ## ##     ## ##       ##    ##
+##     ## ######## ##     ## ########  ######## ##     ##
+
+*/
 
 header {
     height: 8vh;
@@ -40,7 +60,7 @@ header {
     z-index: 10;
 }
 
-.image {
+/*.image {
     clear: right;
     box-sizing: border-box;
     background-color: gray;
@@ -50,23 +70,63 @@ header {
     height: 50vh;
     border-bottom: 3px solid #ffcc22;
     border-top: 3px solid #ffcc22;
-}
+}*/
 
 ul {
     margin: 3vh 5px;
     float: right;
 }
 
-li {
+ul > li {
     display: inline;
     color: #ffcc22;
-    padding: 5px 10px;
+    padding: 5px 0;
+    margin: 0 10px;
     /*border: 2px solid #ffcc22;*/
     /*border-radius: 30px;*/
     cursor: pointer;
+    position: relative;
 }
 
-/*MAIN*/
+li, a:link, a:hover, a:visited {
+    color: #ffcc22;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    /*padding: 5px;*/
+}
+
+li:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffcc22;
+    visibility: hidden;
+    transform: scaleX(0);
+    -webkit-transform: scale(0);
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+}
+
+li:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+}
+
+/*
+
+##     ##    ###    #### ##    ##
+###   ###   ## ##    ##  ###   ##
+#### ####  ##   ##   ##  ####  ##
+## ### ## ##     ##  ##  ## ## ##
+##     ## #########  ##  ##  ####
+##     ## ##     ##  ##  ##   ###
+##     ## ##     ## #### ##    ##
+
+*/
 
 main {
     height: 92vh;
@@ -81,12 +141,7 @@ main {
 .shade {
     height: 100%;
     width: 100%;
-    background-color: #000;
-    opacity: 0.7;
-}
-
-.text {
-    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 main > div:nth-child(2) {
@@ -109,19 +164,18 @@ p {
     text-align: justify;
 }
 
-a, a:link, a:hover, a:visited {
-    color: #ffcc22;
-    font-family: 'Lato', sans-serif;
-    text-decoration: none;
-    /*padding: 5px;*/
-}
 
-a:hover {
-    border-bottom: 2px solid #ffcc22;
-}
+/*
 
+######## ########    ###    ##     ##  ######
+   ##    ##         ## ##   ###   ### ##    ##
+   ##    ##        ##   ##  #### #### ##
+   ##    ######   ##     ## ## ### ##  ######
+   ##    ##       ######### ##     ##       ##
+   ##    ##       ##     ## ##     ## ##    ##
+   ##    ######## ##     ## ##     ##  ######
 
-/*TEAMS*/
+*/
 
 .teams {
     display:flex;
@@ -144,7 +198,17 @@ p.teams_text {
     padding: 2px;
 }
 
-/*FOOTER*/
+/*
+
+########  #######   #######  ######## ######## ########
+##       ##     ## ##     ##    ##    ##       ##     ##
+##       ##     ## ##     ##    ##    ##       ##     ##
+######   ##     ## ##     ##    ##    ######   ########
+##       ##     ## ##     ##    ##    ##       ##   ##
+##       ##     ## ##     ##    ##    ##       ##    ##
+##        #######   #######     ##    ######## ##     ##
+
+*/
 
 footer {
     position: fixed;
