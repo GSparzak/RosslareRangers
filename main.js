@@ -1,6 +1,7 @@
 var navigation = document.getElementById('topMenu');
 var changeContent = function (event) {
     var content = document.getElementById('content');
+    console.log(content);
     newContentPath = event.srcElement.innerText.toLowerCase();
     // console.log(newContentPath);
     // content.innerHTML = newContentPath + '.html';
@@ -9,6 +10,7 @@ var changeContent = function (event) {
     xhr.onreadystatechange= function() {
         if (this.readyState!==4) return;
         if (this.status!==200) return; // or whatever error handling you want
+        console.log(this.responseText);
         content.innerHTML= this.responseText;
     };
     xhr.send();
