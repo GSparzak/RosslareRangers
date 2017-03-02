@@ -16,6 +16,7 @@
     width: 70vw;
     height: 100%;
     position: relative;
+    background-color: transparent;
 }
 
 .content {
@@ -25,12 +26,39 @@
     width: 100%;
     /*height: auto;*/
     transform: translate(0, -50%);
+    background-color: transparent;
 }
 
 .text {
     color: #ffcc22;
     font-family: 'Lato', sans-serif;
 }
+
+h2 {
+    text-align: center;
+    font-size: 1.8em;
+    padding-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+h3 {
+    font-size: 1.2em;
+    margin: 15px;
+}
+
+h4 {
+    font-size: 1.1em;
+    margin: 15px;
+}
+
+p {
+    font-size: 1em;
+    margin: 0 ;
+    padding: 15px 0;
+    line-height: 130%;
+    text-align: justify;
+}
+
 
 /*
 
@@ -132,7 +160,7 @@ main {
     height: 92vh;
     padding: 0;
     background-color: midnightblue;
-    background: url(../images/wexford_cup_1989.jpg) center center;
+    background: url(../images/wexford_cup_1989.jpg) center center fixed;
     background-size: cover;
     position: relative;
     box-sizing: border-box;
@@ -149,15 +177,8 @@ main > div:nth-child(2) {
     overflow-y: auto;
 }
 
-h2 {
-    text-align: center;
-    font-size: 1.8em;
-    padding-top: 2vh;
-    margin-bottom: 2vh;
-}
-
 p {
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin: 0 ;
     padding: 15px 0;
     line-height: 130%;
@@ -180,11 +201,6 @@ p {
 .teams {
     display:flex;
     justify-content: space-around;
-}
-
-h3 {
-    font-size: 1.2em;
-    margin: 15px;
 }
 
 .teams_text {
@@ -227,4 +243,9 @@ footer {
 .info {
     color: white;
     margin-left: 15px;
+}
+
+
+.history {
+    background-color: transparent;
 }
