@@ -1,0 +1,17 @@
+.gymAstroturf {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .gym,
+    .astroturf {
+        width: 40%;
+        margin: 0 20px;
+
+        img {
+            width: 100%;
+            height: auto;
+            border: 3px solid midnightblue;
+        }
+    }
+}

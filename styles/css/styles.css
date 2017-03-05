@@ -1,0 +1,203 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  overflow: hidden;
+  background: url(../../images/wexford_cup_1989.jpg) center center/cover no-repeat; }
+  body .wrapper {
+    margin: 0 auto;
+    /*min-width: 800px;*/
+    width: 70vw;
+    height: 100%;
+    background-color: transparent; }
+  body .text {
+    color: #ffcc22;
+    font-family: 'Lato', sans-serif; }
+  body h2 {
+    text-align: center;
+    font-size: 1.8em;
+    padding-top: 2vh;
+    margin-bottom: 2vh; }
+  body h3 {
+    font-size: 1.2em;
+    margin: 15px; }
+  body h4 {
+    font-size: 1.1em;
+    margin: 15px; }
+  body p {
+    font-size: 1em;
+    margin: 0;
+    padding: 15px 0;
+    line-height: 130%;
+    text-align: justify; }
+  body main {
+    height: 92vh;
+    margin-top: 8vh;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background-color: transparent; }
+    body main .shade {
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7); }
+    body main .content {
+      padding-top: 10vh; }
+
+header {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8vh;
+  background-color: midnightblue;
+  border-bottom: 3px solid #ffcc22;
+  box-sizing: border-box; }
+  header .crest {
+    position: relative;
+    top: 10px;
+    left: 0;
+    width: 140px;
+    height: 140px;
+    z-index: 10; }
+  header ul {
+    margin: 3vh 5px;
+    float: right; }
+    header ul li {
+      display: inline;
+      color: #ffcc22;
+      padding: 5px 0;
+      margin: 0 10px;
+      cursor: pointer;
+      position: relative;
+      font-family: 'Lato', sans-serif; }
+      header ul li:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #ffcc22;
+        visibility: hidden;
+        transform: scaleX(0);
+        -webkit-transform: scale(0);
+        transition: all 0.3s ease-in-out 0s;
+        -webkit-transition: all 0.3s ease-in-out 0s; }
+      header ul li:hover:before {
+        visibility: visible;
+        transform: scaleX(1);
+        -webkit-transform: scaleX(1); }
+      header ul li a:link,
+      header ul li a:visited,
+      header ul li a:hover,
+      header ul li a:active {
+        color: #ffcc22;
+        text-decoration: none; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  font-size: 0.7em;
+  padding: 5px 0;
+  height: 10px;
+  min-width: 1000px;
+  width: 100vw;
+  border-top: 1px solid #fc2;
+  /*border-bottom: 1px solid #fc2;*/
+  display: flex;
+  justify-content: space-between; }
+  footer .info {
+    color: white;
+    margin: 0 15px; }
+    footer .info a:link,
+    footer .info a:visited,
+    footer .info a:hover,
+    footer .info a:active {
+      color: #ffcc22;
+      text-decoration: none; }
+
+.homePage {
+  padding-top: 20vh; }
+  .homePage p {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 15px 0;
+    line-height: 130%;
+    text-align: justify; }
+
+.teams {
+  height: 100%;
+  display: flex;
+  justify-content: space-around; }
+  .teams .teams_text {
+    color: #ffcc22;
+    font-family: 'Lato', sans-serif; }
+  .teams p.teams_text {
+    font-size: 1em;
+    margin: 0;
+    padding: 2px; }
+
+.history {
+  background-color: transparent; }
+
+.gymAstroturf {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .gymAstroturf .gym,
+  .gymAstroturf .astroturf {
+    width: 40%;
+    margin: 0 20px; }
+    .gymAstroturf .gym img,
+    .gymAstroturf .astroturf img {
+      width: 100%;
+      height: auto;
+      border: 3px solid midnightblue; }
