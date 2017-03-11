@@ -27,7 +27,7 @@ header {
             display: inline;
             color: #ffcc22;
             padding: 5px 0;
-            margin: 0 10px;
+            margin: 0 8px;
             cursor: pointer;
             position: relative;
             font-family: 'Lato', sans-serif;
@@ -65,4 +65,64 @@ header {
         //end li
     }
     //end ul
+}
+
+
+/*
+
+##     ## ########
+###   ### ##     ##
+#### #### ##     ##
+## ### ## ##     ##
+##     ## ##     ##
+##     ## ##     ##
+##     ## ########
+
+*/
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    header {
+        .crest {
+            width: 100px;
+            height: 100px;
+            top: 16px;
+        }
+
+        ul {
+
+            li {
+                font-size: 12px;
+            }
+        }
+    }
+
+}
+
+/*
+
+##     ##  ######      ######  ##     ##
+ ##   ##  ##    ##    ##    ## ###   ###
+  ## ##   ##          ##       #### ####
+   ###     ######      ######  ## ### ##
+  ## ##         ##          ## ##     ##
+ ##   ##  ##    ##    ##    ## ##     ##
+##     ##  ######      ######  ##     ##
+
+*/
+
+@media screen and (max-width: 991px){
+    header {
+        .crest {
+            width: 100px;
+            height: 100px;
+            top: 3vh;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+
+        #topMenu {
+            display: none;
+        }
+    }
 }

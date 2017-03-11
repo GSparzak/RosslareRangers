@@ -1,0 +1,34 @@
+.honours,
+.schoolHonours {
+    text-align: center;
+
+
+    ul {
+        max-width: 800px;
+        margin: 0 auto;
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+
+            h3 {
+                display: inline-block;
+                margin-top: 12px;
+                margin-bottom: 12px;
+            }
+
+            span {
+                color: #fff;
+                font-size: 1.1em;
+                font-family: 'Lato', sans-serif;
+                margin-top: 12px;
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
+
+.schoolHonours {
+    margin: 100px 0;
+}

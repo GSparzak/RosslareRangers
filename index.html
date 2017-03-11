@@ -9,27 +9,25 @@
 <body>
     <header>
         <div class="wrapper">
-            <a href="index.html"><img class="crest" src="images/rangers_crest.png" alt="Rosslare Rangers A.F.C."></a>
+            <a href="/rangers/"><img class="crest" src="images/rangers_crest.png" alt="Rosslare Rangers A.F.C."></a>
             <ul id="topMenu">
-                <li>HISTORY</li>
-                <li>HONOURS</li>
-                <li>TEAMS</li>
-                <li>GYM & ASTROTURF</li>
-                <li>GALLERY</li>
+                <li data-link="teams" class="nav">TEAMS</li>
+                <li data-link="history" class="nav">HISTORY</li>
+                <li data-link="honours" class="nav">HONOURS</li>
+                <li data-link="gymastroturf" class="nav">GYM & ASTROTURF</li>
+                <li data-link="gallery" class="nav">GALLERY</li>
                 <li><a href="http://www.balondirect.com/index.php/catalog/category/view/s/rosslare-rangers-afc/id/125/" target="_blank" class="" title="SHOP">SHOP</a></li>
-                <li>CLUB INFO</li>
+                <li data-link="clubinfo" class="nav">CLUB INFO</li>
             </ul>
         </div>
     </header>
     <main>
-        <div class="shade">
-            <div id="content">
-                <div class="wrapper ">
-                    <div class="homePage">
-                        <h2 class="text">Welcome to Rosslare Rangers A.F.C.</h2>
-                        <p class="text">Welcome to the official website of Rosslare Rangers. We are an amateur football club based in Rosslare Harbour, Co Wexford. Formed in 1969, the club provides training and competitive sporting opportunities for male and female players from underage to adult level. Rosslare Rangers has grown from strength to strength since formation and now boasts one of the best sports complex in the south east, which includes all weather astroturf pitches and a state-of-the-art clubhouse and gym.</p>
-                        <p class="text">Feel free to browse through our website. Get in touch if you have any old Rosslare Rangers memorabilia which you think would be useful for the website. If you have any queries about the club please feel free to contact a Rosslare Rangers Committee member.</p>
-                    </div>
+        <div id="content">
+            <div class="wrapper ">
+                <div class="homePage">
+                    <h1 class="text">Welcome to Rosslare Rangers A.F.C.</h1>
+                    <p class="text">Welcome to the official website of Rosslare Rangers. We are an amateur football club based in Rosslare Harbour, Co Wexford. Formed in 1969, the club provides training and competitive sporting opportunities for male and female players from underage to adult level. Rosslare Rangers has grown from strength to strength since formation and now boasts one of the best sports complex in the south east, which includes all weather astroturf pitches and a state-of-the-art clubhouse and gym.</p>
+                    <p class="text">Feel free to browse through our website. Get in touch if you have any old Rosslare Rangers memorabilia which you think would be useful for the website. If you have any queries about the club please feel free to contact a Rosslare Rangers Committee member.</p>
                 </div>
             </div>
         </div>
@@ -40,5 +38,9 @@
     </footer>
 
     <script type="text/javascript" src="main.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBDSikLxAH0tvCCFhWnmnKiiMcG0-A63Q&callback=initMap">
+    </script>
+
 </body>
 </html>

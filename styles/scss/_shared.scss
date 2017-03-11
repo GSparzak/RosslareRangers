@@ -1,12 +1,13 @@
 body {
     overflow: hidden;
-    background: url(../../images/wexford_cup_1989.jpg) center center/cover no-repeat;
+    background: url(../../images/teamb-bg.jpg) center center/cover no-repeat;
 
     .wrapper {
         margin: 0 auto;
         /*min-width: 800px;*/
         width: 70vw;
         height: 100%;
+        padding-bottom: 40px;
         background-color: transparent;
     }
 
@@ -15,16 +16,23 @@ body {
         font-family: 'Lato', sans-serif;
     }
 
-    h2 {
+    h1 {
         text-align: center;
         font-size: 1.8em;
         padding-top: 2vh;
         margin-bottom: 2vh;
     }
 
+    h2 {
+        text-align: center;
+        font-size: 1.8em;
+        padding-top: 2vh;
+        margin-bottom: 6vh;
+    }
+
     h3 {
-        font-size: 1.2em;
-        margin: 15px;
+        font-size: 1.3em;
+        margin: 30px 0 20px;
     }
 
     h4 {
@@ -48,20 +56,9 @@ body {
         overflow-y: auto;
         background-color: transparent;
 
-
-        .shade {
-            height: 100%;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-
         .content {
             padding-top: 10vh;
         }
 
-        // div:nth-child(2) {
-        //     height: 42vh;
-        //     overflow-y: auto;
-        // }
     }
 }

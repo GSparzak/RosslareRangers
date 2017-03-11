@@ -47,24 +47,30 @@ table {
 
 body {
   overflow: hidden;
-  background: url(../../images/wexford_cup_1989.jpg) center center/cover no-repeat; }
+  background: url(../../images/teamb-bg.jpg) center center/cover no-repeat; }
   body .wrapper {
     margin: 0 auto;
     /*min-width: 800px;*/
     width: 70vw;
     height: 100%;
+    padding-bottom: 40px;
     background-color: transparent; }
   body .text {
     color: #ffcc22;
     font-family: 'Lato', sans-serif; }
-  body h2 {
+  body h1 {
     text-align: center;
     font-size: 1.8em;
     padding-top: 2vh;
     margin-bottom: 2vh; }
+  body h2 {
+    text-align: center;
+    font-size: 1.8em;
+    padding-top: 2vh;
+    margin-bottom: 6vh; }
   body h3 {
-    font-size: 1.2em;
-    margin: 15px; }
+    font-size: 1.3em;
+    margin: 30px 0 20px; }
   body h4 {
     font-size: 1.1em;
     margin: 15px; }
@@ -81,10 +87,6 @@ body {
     box-sizing: border-box;
     overflow-y: auto;
     background-color: transparent; }
-    body main .shade {
-      height: 100%;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.7); }
     body main .content {
       padding-top: 10vh; }
 
@@ -112,7 +114,7 @@ header {
       display: inline;
       color: #ffcc22;
       padding: 5px 0;
-      margin: 0 10px;
+      margin: 0 8px;
       cursor: pointer;
       position: relative;
       font-family: 'Lato', sans-serif; }
@@ -139,6 +141,46 @@ header {
       header ul li a:active {
         color: #ffcc22;
         text-decoration: none; }
+
+/*
+
+##     ## ########
+###   ### ##     ##
+#### #### ##     ##
+## ### ## ##     ##
+##     ## ##     ##
+##     ## ##     ##
+##     ## ########
+
+*/
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  header .crest {
+    width: 100px;
+    height: 100px;
+    top: 16px; }
+  header ul li {
+    font-size: 12px; } }
+
+/*
+
+##     ##  ######      ######  ##     ##
+ ##   ##  ##    ##    ##    ## ###   ###
+  ## ##   ##          ##       #### ####
+   ###     ######      ######  ## ### ##
+  ## ##         ##          ## ##     ##
+ ##   ##  ##    ##    ##    ## ##     ##
+##     ##  ######      ######  ##     ##
+
+*/
+@media screen and (max-width: 991px) {
+  header .crest {
+    width: 100px;
+    height: 100px;
+    top: 3vh;
+    left: 50%;
+    transform: translateX(-50%); }
+  header #topMenu {
+    display: none; } }
 
 footer {
   position: fixed;
@@ -176,7 +218,8 @@ footer {
 .teams {
   height: 100%;
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  margin-bottom: 40px; }
   .teams .teams_text {
     color: #ffcc22;
     font-family: 'Lato', sans-serif; }
@@ -200,4 +243,106 @@ footer {
     .gymAstroturf .astroturf img {
       width: 100%;
       height: auto;
-      border: 3px solid midnightblue; }
+      border: 3px solid #fc2;
+      margin-bottom: 30px; }
+
+.honours,
+.schoolHonours {
+  text-align: center; }
+  .honours ul,
+  .schoolHonours ul {
+    max-width: 800px;
+    margin: 0 auto; }
+    .honours ul li,
+    .schoolHonours ul li {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto; }
+      .honours ul li h3,
+      .schoolHonours ul li h3 {
+        display: inline-block;
+        margin-top: 12px;
+        margin-bottom: 12px; }
+      .honours ul li span,
+      .schoolHonours ul li span {
+        color: #fff;
+        font-size: 1.1em;
+        font-family: 'Lato', sans-serif;
+        margin-top: 12px;
+        margin-bottom: 12px; }
+
+.schoolHonours {
+  margin: 100px 0; }
+
+.clubInfoFlex {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0; }
+  .clubInfoFlex .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 80px;
+    width: 40%; }
+    .clubInfoFlex .info.data {
+      min-width: 472px; }
+    .clubInfoFlex .info ul p {
+      padding: 0;
+      margin-bottom: 10px; }
+    .clubInfoFlex .info a {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 60px; }
+      .clubInfoFlex .info a img {
+        width: 100%;
+        height: auto; }
+    .clubInfoFlex .info .mapContainer {
+      width: 100%;
+      border: 3px solid #fc2;
+      padding-bottom: 60%;
+      position: relative;
+      text-align: right; }
+      .clubInfoFlex .info .mapContainer #map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+    .clubInfoFlex .info .board {
+      width: 100%;
+      margin-top: 40px; }
+      .clubInfoFlex .info .board ul {
+        width: 100%;
+        padding: 0; }
+        .clubInfoFlex .info .board ul li {
+          padding: 0; }
+  .clubInfoFlex img {
+    border: 3px solid #fc2; }
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .links a {
+    width: 20%;
+    max-width: 120px; }
+    .links a img {
+      width: 100%;
+      height: auto; }
+
+.gallery p {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.gallery .photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+  .gallery .photos a {
+    box-sizing: border-box;
+    width: 25%;
+    padding: 15px; }
+    .gallery .photos a img {
+      width: 100%;
+      height: auto;
+      border: 2px solid #fc2; }
