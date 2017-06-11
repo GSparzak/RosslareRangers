@@ -94,13 +94,13 @@ body {
     height: 40px;
     background-color: blue;
     border-top: 2px solid #ffcc22;
-    border-left: 2px solid #ffcc22;
+    border-right: 2px solid #ffcc22;
     border-bottom: 2px solid #ffcc22;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     position: absolute;
     top: 35%;
-    right: 0; }
+    left: 0; }
     body .fb-iconContainer img {
       width: 100%;
       height: auto; }

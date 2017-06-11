@@ -69,13 +69,13 @@ body {
         height: 40px;
         background-color: blue;
         border-top: 2px solid $main-yellow;
-        border-left: 2px solid $main-yellow;
+        border-right: 2px solid $main-yellow;
         border-bottom: 2px solid $main-yellow;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
         position: absolute;
         top: 35%;
-        right: 0;
+        left: 0;
 
         img {
             width: 100%;
