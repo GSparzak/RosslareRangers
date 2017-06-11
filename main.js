@@ -1,3 +1,5 @@
+/* PAGES AJAX LOAD */
+
 var navigation = document.getElementById('topMenu');
 var changeContent = function (event) {
     var content = document.getElementById('content');
@@ -17,6 +19,9 @@ var changeContent = function (event) {
 }
 
 navigation.addEventListener('click', changeContent, false);
+
+
+/* GOOGLE MAP */
 
 var initMap = function () {
     var grounds = {lat: 52.245091, lng: -6.334535};

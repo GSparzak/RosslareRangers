@@ -1,6 +1,9 @@
+$main-yellow: #ffcc22;
+$main-blue: midnightblue;
+
 body {
     overflow: hidden;
-    background: url(../../images/teamb-bg.jpg) center center/cover no-repeat;
+    background: url(../../images/rr_bg.jpg);
 
     .wrapper {
         margin: 0 auto;
@@ -59,6 +62,24 @@ body {
         .content {
             padding-top: 10vh;
         }
+    }
 
+    .fb-iconContainer {
+        width: 40px;
+        height: 40px;
+        background-color: blue;
+        border-top: 2px solid $main-yellow;
+        border-left: 2px solid $main-yellow;
+        border-bottom: 2px solid $main-yellow;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        position: absolute;
+        top: 35%;
+        right: 0;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 }

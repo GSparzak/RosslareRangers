@@ -47,7 +47,7 @@ table {
 
 body {
   overflow: hidden;
-  background: url(../../images/teamb-bg.jpg) center center/cover no-repeat; }
+  background: url(../../images/rr_bg.jpg); }
   body .wrapper {
     margin: 0 auto;
     /*min-width: 800px;*/
@@ -89,6 +89,21 @@ body {
     background-color: transparent; }
     body main .content {
       padding-top: 10vh; }
+  body .fb-iconContainer {
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    border-top: 2px solid #ffcc22;
+    border-left: 2px solid #ffcc22;
+    border-bottom: 2px solid #ffcc22;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: absolute;
+    top: 35%;
+    right: 0; }
+    body .fb-iconContainer img {
+      width: 100%;
+      height: auto; }
 
 header {
   z-index: 5;
