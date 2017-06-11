@@ -1,3 +1,23 @@
+@-webkit-keyframes slide-from-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes slide-from-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; } }
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -222,13 +242,20 @@ footer {
       text-decoration: none; }
 
 .homePage {
-  padding-top: 20vh; }
+  padding-top: 80px;
+  margin-bottom: 100px; }
   .homePage p {
     font-size: 1.2em;
+    font-weight: 300;
     margin: 0;
     padding: 15px 0;
     line-height: 130%;
     text-align: justify; }
+  .homePage img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ffcc22;
+    margin: 30px 0; }
 
 .teams {
   height: 100%;
