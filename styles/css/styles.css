@@ -67,7 +67,7 @@ table {
 
 body {
   overflow: hidden;
-  background: url(../../images/rr_bg.jpg); }
+  background: #0e0e3d; }
   body .wrapper {
     margin: 0 auto;
     /*min-width: 800px;*/
@@ -80,9 +80,8 @@ body {
     font-family: 'Lato', sans-serif; }
   body h1 {
     text-align: center;
-    font-size: 1.8em;
-    padding-top: 2vh;
-    margin-bottom: 2vh; }
+    font-size: 48px;
+    margin-bottom: 4vh; }
   body h2 {
     text-align: center;
     font-size: 1.8em;
@@ -102,8 +101,7 @@ body {
     text-align: justify; }
   body main {
     height: 92vh;
-    margin-top: 8vh;
-    padding: 0;
+    padding: 80px 0 0;
     box-sizing: border-box;
     overflow-y: auto;
     background-color: transparent; }
@@ -134,48 +132,53 @@ header {
   height: 8vh;
   background-color: midnightblue;
   border-bottom: 3px solid #ffcc22;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  position: relative; }
   header .crest {
-    position: relative;
+    position: absolute;
     top: 10px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 140px;
     height: 140px;
     z-index: 10; }
-  header ul {
-    margin: 3vh 5px;
-    float: right; }
-    header ul li {
-      display: inline;
-      color: #ffcc22;
-      padding: 5px 0;
-      margin: 0 8px;
-      cursor: pointer;
-      position: relative;
-      font-family: 'Lato', sans-serif; }
-      header ul li:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #ffcc22;
-        visibility: hidden;
-        transform: scaleX(0);
-        -webkit-transform: scale(0);
-        transition: all 0.3s ease-in-out 0s;
-        -webkit-transition: all 0.3s ease-in-out 0s; }
-      header ul li:hover:before {
-        visibility: visible;
-        transform: scaleX(1);
-        -webkit-transform: scaleX(1); }
-      header ul li a:link,
-      header ul li a:visited,
-      header ul li a:hover,
-      header ul li a:active {
+  header nav {
+    display: flex;
+    justify-content: space-between; }
+    header nav ul {
+      margin: 3vh 5px;
+      float: right; }
+      header nav ul li {
+        display: inline;
         color: #ffcc22;
-        text-decoration: none; }
+        padding: 5px 0;
+        margin-right: 20px;
+        cursor: pointer;
+        position: relative;
+        font-family: 'Lato', sans-serif; }
+        header nav ul li:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: #ffcc22;
+          visibility: hidden;
+          transform: scaleX(0);
+          -webkit-transform: scale(0);
+          transition: all 0.3s ease-in-out 0s;
+          -webkit-transition: all 0.3s ease-in-out 0s; }
+        header nav ul li:hover:before {
+          visibility: visible;
+          transform: scaleX(1);
+          -webkit-transform: scaleX(1); }
+        header nav ul li a:link,
+        header nav ul li a:visited,
+        header nav ul li a:hover,
+        header nav ul li a:active {
+          color: #ffcc22;
+          text-decoration: none; }
 
 /*
 
@@ -242,7 +245,7 @@ footer {
       text-decoration: none; }
 
 .homePage {
-  padding-top: 80px;
+  padding-top: 40px;
   margin-bottom: 100px; }
   .homePage p {
     font-size: 1.2em;
@@ -251,11 +254,15 @@ footer {
     padding: 15px 0;
     line-height: 130%;
     text-align: justify; }
+    .homePage p.welcome {
+      font-size: 30px;
+      text-align: center; }
   .homePage img {
     width: 100%;
+    max-width: 800px;
     height: auto;
-    border: 2px solid #ffcc22;
-    margin: 30px 0; }
+    margin: 30px auto;
+    display: block; }
 
 .teams {
   height: 100%;

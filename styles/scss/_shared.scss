@@ -3,7 +3,7 @@ $main-blue: midnightblue;
 
 body {
     overflow: hidden;
-    background: url(../../images/rr_bg.jpg);
+    background: #0e0e3d;
 
     .wrapper {
         margin: 0 auto;
@@ -21,9 +21,8 @@ body {
 
     h1 {
         text-align: center;
-        font-size: 1.8em;
-        padding-top: 2vh;
-        margin-bottom: 2vh;
+        font-size: 48px;
+        margin-bottom: 4vh;
     }
 
     h2 {
@@ -53,8 +52,7 @@ body {
 
     main {
         height: 92vh;
-        margin-top: 8vh;
-        padding: 0;
+        padding: 80px 0 0;
         box-sizing: border-box;
         overflow-y: auto;
         background-color: transparent;
