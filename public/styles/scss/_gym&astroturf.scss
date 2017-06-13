@@ -8,12 +8,15 @@
         width: 40%;
         margin: 0 20px;
 
-        img {
-            width: 100%;
-            height: auto;
-            border: 3px solid #fc2;
-            border-radius: 3px;
+        a {
             margin-bottom: 30px;
+
+            img {
+                width: 100%;
+                height: auto;
+                border: 3px solid #fc2;
+                border-radius: 3px;
+            }
         }
     }
 }

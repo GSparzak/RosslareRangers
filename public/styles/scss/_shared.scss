@@ -1,13 +1,16 @@
 $main-yellow: #ffcc22;
 $main-blue: #036;
 
+* {
+    outline: none;
+}
+
 body {
     overflow: hidden;
-    background: url(/images/bg01.jpg) center center/cover no-repeat;
+    // background: url(/public/images/bg01.jpg) center center/cover no-repeat;
 
     .wrapper {
         margin: 0 auto;
-        /*min-width: 800px;*/
         width: 70vw;
         height: 100%;
         background-color: transparent;
@@ -58,7 +61,7 @@ body {
         padding: 40px 0 0;
         box-sizing: border-box;
         overflow-y: auto;
-        background: url(/images/bg01.jpg) center center/cover no-repeat;
+        background: url(/public/images/bg01.jpg) center center/cover no-repeat;
 
         .content {
             padding-top: 80px;

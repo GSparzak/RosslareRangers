@@ -65,12 +65,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+* {
+  outline: none; }
+
 body {
-  overflow: hidden;
-  background: url(/images/bg01.jpg) center center/cover no-repeat; }
+  overflow: hidden; }
   body .wrapper {
     margin: 0 auto;
-    /*min-width: 800px;*/
     width: 70vw;
     height: 100%;
     background-color: transparent; }
@@ -109,7 +110,7 @@ body {
     padding: 40px 0 0;
     box-sizing: border-box;
     overflow-y: auto;
-    background: url(/images/bg01.jpg) center center/cover no-repeat; }
+    background: url(/public/images/bg01.jpg) center center/cover no-repeat; }
     body main .content {
       padding-top: 80px; }
   body .fb-iconContainer {
@@ -264,12 +265,6 @@ footer {
       font-weight: 700;
       margin-bottom: 60px;
       font-family: 'Voces'; }
-  .homePage img {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    margin: 30px auto;
-    display: none; }
   .homePage .results {
     margin-top: 55px; }
     .homePage .results p {
@@ -297,13 +292,15 @@ footer {
   .gymAstroturf .astroturf {
     width: 40%;
     margin: 0 20px; }
-    .gymAstroturf .gym img,
-    .gymAstroturf .astroturf img {
-      width: 100%;
-      height: auto;
-      border: 3px solid #fc2;
-      border-radius: 3px;
+    .gymAstroturf .gym a,
+    .gymAstroturf .astroturf a {
       margin-bottom: 30px; }
+      .gymAstroturf .gym a img,
+      .gymAstroturf .astroturf a img {
+        width: 100%;
+        height: auto;
+        border: 3px solid #fc2;
+        border-radius: 3px; }
 
 .honours,
 .schoolHonours {
@@ -390,20 +387,3 @@ footer {
     .links a img {
       width: 100%;
       height: auto; }
-
-.gallery p {
-  padding-left: 15px;
-  padding-right: 15px; }
-
-.gallery .photos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start; }
-  .gallery .photos a {
-    box-sizing: border-box;
-    width: 25%;
-    padding: 15px; }
-    .gallery .photos a img {
-      width: 100%;
-      height: auto;
-      border: 2px solid #fc2; }
