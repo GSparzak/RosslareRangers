@@ -67,46 +67,51 @@ table {
 
 body {
   overflow: hidden;
-  background: #0e0e3d; }
+  background: url(/images/bg01.jpg) center center/cover no-repeat; }
   body .wrapper {
     margin: 0 auto;
     /*min-width: 800px;*/
     width: 70vw;
     height: 100%;
-    padding-bottom: 40px;
     background-color: transparent; }
-  body .text {
-    color: #ffcc22;
-    font-family: 'Lato', sans-serif; }
   body h1 {
-    text-align: center;
-    font-size: 48px;
-    margin-bottom: 4vh; }
+    font-size: 70px;
+    font-family: 'Voces', cursive;
+    color: #ffcc22; }
   body h2 {
     text-align: center;
     font-size: 1.8em;
     padding-top: 2vh;
-    margin-bottom: 6vh; }
+    margin-bottom: 6vh;
+    font-family: 'Voces', cursive;
+    color: #ffcc22; }
   body h3 {
     font-size: 1.3em;
-    margin: 30px 0 20px; }
+    margin: 30px 0 20px;
+    font-family: 'Voces', cursive;
+    color: #ffcc22; }
   body h4 {
     font-size: 1.1em;
-    margin: 15px; }
+    margin: 15px;
+    font-family: 'Voces', cursive;
+    color: #ffcc22; }
   body p {
-    font-size: 1em;
+    font-size: 16px;
     margin: 0;
     padding: 15px 0;
     line-height: 130%;
-    text-align: justify; }
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #fff; }
   body main {
     height: 92vh;
-    padding: 80px 0 0;
+    padding: 40px 0 0;
     box-sizing: border-box;
     overflow-y: auto;
-    background-color: transparent; }
+    background: url(/images/bg01.jpg) center center/cover no-repeat; }
     body main .content {
-      padding-top: 10vh; }
+      padding-top: 80px; }
   body .fb-iconContainer {
     width: 40px;
     height: 40px;
@@ -146,7 +151,7 @@ header {
     display: flex;
     justify-content: space-between; }
     header nav ul {
-      margin: 3vh 5px;
+      margin: 3vh 0;
       float: right; }
       header nav ul li {
         display: inline;
@@ -245,8 +250,7 @@ footer {
       text-decoration: none; }
 
 .homePage {
-  padding-top: 40px;
-  margin-bottom: 100px; }
+  padding-top: 120px; }
   .homePage p {
     font-size: 1.2em;
     font-weight: 300;
@@ -255,30 +259,35 @@ footer {
     line-height: 130%;
     text-align: justify; }
     .homePage p.welcome {
-      font-size: 30px;
-      text-align: center; }
+      font-size: 24px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 60px;
+      font-family: 'Voces'; }
   .homePage img {
     width: 100%;
     max-width: 800px;
     height: auto;
     margin: 30px auto;
-    display: block; }
+    display: none; }
+  .homePage .results {
+    margin-top: 55px; }
+    .homePage .results p {
+      text-align: center; }
+    .homePage .results img {
+      display: inline; }
 
 .teams {
   height: 100%;
   display: flex;
   justify-content: space-around;
   margin-bottom: 40px; }
-  .teams .teams_text {
-    color: #ffcc22;
-    font-family: 'Lato', sans-serif; }
   .teams p.teams_text {
-    font-size: 1em;
-    margin: 0;
     padding: 2px; }
 
 .history {
-  background-color: transparent; }
+  background-color: transparent;
+  margin-bottom: 40px; }
 
 .gymAstroturf {
   display: flex;
@@ -293,6 +302,7 @@ footer {
       width: 100%;
       height: auto;
       border: 3px solid #fc2;
+      border-radius: 3px;
       margin-bottom: 30px; }
 
 .honours,
@@ -316,7 +326,7 @@ footer {
       .schoolHonours ul li span {
         color: #fff;
         font-size: 1.1em;
-        font-family: 'Lato', sans-serif;
+        font-family: 'Open Sans', sans-serif;
         margin-top: 12px;
         margin-bottom: 12px; }
 
@@ -348,6 +358,7 @@ footer {
     .clubInfoFlex .info .mapContainer {
       width: 100%;
       border: 3px solid #fc2;
+      border-radius: 3px;
       padding-bottom: 60%;
       position: relative;
       text-align: right; }
@@ -366,7 +377,8 @@ footer {
         .clubInfoFlex .info .board ul li {
           padding: 0; }
   .clubInfoFlex img {
-    border: 3px solid #fc2; }
+    border: 3px solid #fc2;
+    border-radius: 3px; }
 
 .links {
   display: flex;

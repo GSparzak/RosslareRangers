@@ -1,6 +1,6 @@
 .homePage {
-    padding-top: 40px;
-    margin-bottom: 100px;
+    padding-top: 120px;
+    // margin-bottom: 100px;
 
     p {
         font-size: 1.2em;
@@ -11,8 +11,11 @@
         text-align: justify;
 
         &.welcome {
-            font-size: 30px;
-            text-align: center;
+            font-size: 24px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 60px;
+            font-family: 'Voces';
         }
     }
 
@@ -21,6 +24,18 @@
         max-width: 800px;
         height: auto;
         margin: 30px auto;
-        display: block;
+        display: none;
+    }
+
+    .results {
+        margin-top: 55px;
+
+        p {
+            text-align: center;
+        }
+
+        img {
+            display: inline;
+        }
     }
 }

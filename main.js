@@ -1,11 +1,12 @@
 /* PAGES AJAX LOAD */
 
-var navigation = document.getElementById('topMenu');
+var leftNavigation = document.getElementById('leftMenu');
+var rightNavigation = document.getElementById('rightMenu');
 var changeContent = function (event) {
     var content = document.getElementById('content');
     newContentPath = event.srcElement.attributes[0].value;
     var xhr= new XMLHttpRequest();
-    xhr.open('GET', '/RosslareRangers/pages/' + newContentPath + '.html', true);
+    xhr.open('GET', '/pages/' + newContentPath + '.html', true);
     xhr.onreadystatechange= function() {
         if (this.readyState!==4) return;
         if (this.status!==200) return;
@@ -18,7 +19,8 @@ var changeContent = function (event) {
     xhr.send();
 }
 
-navigation.addEventListener('click', changeContent, false);
+leftNavigation.addEventListener('click', changeContent, false);
+rightNavigation.addEventListener('click', changeContent, false);
 
 
 /* GOOGLE MAP */

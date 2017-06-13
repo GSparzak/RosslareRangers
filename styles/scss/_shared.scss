@@ -1,28 +1,22 @@
 $main-yellow: #ffcc22;
-$main-blue: midnightblue;
+$main-blue: #036;
 
 body {
     overflow: hidden;
-    background: #0e0e3d;
+    background: url(/images/bg01.jpg) center center/cover no-repeat;
 
     .wrapper {
         margin: 0 auto;
         /*min-width: 800px;*/
         width: 70vw;
         height: 100%;
-        padding-bottom: 40px;
         background-color: transparent;
     }
 
-    .text {
-        color: #ffcc22;
-        font-family: 'Lato', sans-serif;
-    }
-
     h1 {
-        text-align: center;
-        font-size: 48px;
-        margin-bottom: 4vh;
+        font-size: 70px;
+        font-family: 'Voces', cursive;
+        color: $main-yellow;
     }
 
     h2 {
@@ -30,35 +24,44 @@ body {
         font-size: 1.8em;
         padding-top: 2vh;
         margin-bottom: 6vh;
+        font-family: 'Voces', cursive;
+        color: $main-yellow;
     }
 
     h3 {
         font-size: 1.3em;
         margin: 30px 0 20px;
+        font-family: 'Voces', cursive;
+        color: $main-yellow;
     }
 
     h4 {
         font-size: 1.1em;
         margin: 15px;
+        font-family: 'Voces', cursive;
+        color: $main-yellow;
     }
 
     p {
-        font-size: 1em;
+        font-size: 16px;
         margin: 0 ;
         padding: 15px 0;
         line-height: 130%;
         text-align: justify;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        color: #fff;
     }
 
     main {
         height: 92vh;
-        padding: 80px 0 0;
+        padding: 40px 0 0;
         box-sizing: border-box;
         overflow-y: auto;
-        background-color: transparent;
+        background: url(/images/bg01.jpg) center center/cover no-repeat;
 
         .content {
-            padding-top: 10vh;
+            padding-top: 80px;
         }
     }
 

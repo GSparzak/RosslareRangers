@@ -39,6 +39,7 @@
         .mapContainer {
             width: 100%;
             border: 3px solid #fc2;
+            border-radius: 3px;
             padding-bottom: 60%;
             position: relative;
             text-align: right;
@@ -71,6 +72,7 @@
 
     img {
         border: 3px solid #fc2;
+        border-radius: 3px;
     }
 }
 //end .clubInfoFlex
