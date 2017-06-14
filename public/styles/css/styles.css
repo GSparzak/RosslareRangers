@@ -399,3 +399,45 @@ footer {
     padding-left: 15px;
     padding-right: 15px;
     text-align: center; }
+
+.codeofrespect .codeHeader {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; }
+  .codeofrespect .codeHeader a:link,
+  .codeofrespect .codeHeader a:visited {
+    padding: 15px 50px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    background-color: #191970;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    text-decoration: none; }
+  .codeofrespect .codeHeader a:hover {
+    color: #ffcc22;
+    border: 2px solid #ffcc22;
+    background-color: #191970; }
+  .codeofrespect .codeHeader a:active {
+    color: #191970;
+    border: 2px solid #191970;
+    background-color: #ffcc22; }
+
+.codeofrespect .code {
+  display: none;
+  max-width: 800px;
+  margin: 40px auto 100px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif; }
+  .codeofrespect .code:first-of-type {
+    display: block; }
+  .codeofrespect .code h2 {
+    text-align: left;
+    margin-bottom: 20px; }
+  .codeofrespect .code ul {
+    padding-left: 20px; }
+    .codeofrespect .code ul li {
+      padding: 5px 0;
+      line-height: 1.4;
+      list-style-type: circle; }

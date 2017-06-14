@@ -1,0 +1,63 @@
+.codeofrespect {
+
+    .codeHeader {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        a:link,
+        a:visited {
+            padding: 15px 50px;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 3px;
+            background-color: $main-blue;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: $main-yellow;
+            border: 2px solid $main-yellow;
+            // border-radius: 3px;
+            background-color: $main-blue;
+        }
+
+        a:active {
+            color: $main-blue;
+            border: 2px solid $main-blue;
+            // border-radius: 3px;
+            background-color: $main-yellow;
+        }
+    }
+    //end codeHeader
+
+    .code {
+        display: none;
+        max-width: 800px;
+        margin: 40px auto 100px;
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+
+        &:first-of-type {
+            display: block;
+        }
+
+        h2 {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+
+            li {
+                padding: 5px 0;
+                line-height: 1.4;
+                list-style-type: circle;
+            }
+        }
+    }
+}
