@@ -1,25 +1,9 @@
-// .gallery {
-//
-//     p {
-//         padding-left: 15px;
-//         padding-right: 15px;
-//     }
-//
-//     .photos {
-//         display: flex;
-//         flex-wrap: wrap;
-//         justify-content: flex-start;
-//
-//         a {
-//             box-sizing: border-box;
-//             width: 25%;
-//             padding: 15px;
-//
-//             img {
-//                 width: 100%;
-//                 height: auto;
-//                 border: 2px solid #fc2;
-//             }
-//         }
-//     }
-// }
+.gallery {
+    margin-bottom: 100px;
+
+    p {
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+    }
+}

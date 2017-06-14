@@ -166,7 +166,7 @@ header {
           content: "";
           position: absolute;
           width: 100%;
-          height: 2px;
+          height: 1px;
           bottom: 0;
           left: 0;
           background-color: #ffcc22;
@@ -242,7 +242,8 @@ footer {
   justify-content: space-between; }
   footer .info {
     color: white;
-    margin: 0 15px; }
+    margin: 0 15px;
+    font-family: 'Open Sans', sans-serif; }
     footer .info a:link,
     footer .info a:visited,
     footer .info a:hover,
@@ -276,18 +277,19 @@ footer {
   height: 100%;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 40px; }
+  margin-bottom: 100px; }
   .teams p.teams_text {
     padding: 2px; }
 
 .history {
   background-color: transparent;
-  margin-bottom: 40px; }
+  margin-bottom: 100px; }
 
 .gymAstroturf {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-bottom: 100px; }
   .gymAstroturf .gym,
   .gymAstroturf .astroturf {
     width: 40%;
@@ -373,6 +375,8 @@ footer {
         padding: 0; }
         .clubInfoFlex .info .board ul li {
           padding: 0; }
+  .clubInfoFlex + .links {
+    margin-bottom: 100px; }
   .clubInfoFlex img {
     border: 3px solid #fc2;
     border-radius: 3px; }
@@ -387,3 +391,10 @@ footer {
     .links a img {
       width: 100%;
       height: auto; }
+
+.gallery {
+  margin-bottom: 100px; }
+  .gallery p {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center; }
