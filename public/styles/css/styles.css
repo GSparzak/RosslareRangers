@@ -1,3 +1,11 @@
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%; }
+  100% {
+    opacity: 1;
+    left: 0; } }
+
 @-webkit-keyframes slide-from-left {
   0% {
     -webkit-transform: translateX(-1000px);
@@ -72,7 +80,7 @@ body {
   overflow: hidden; }
   body .wrapper {
     margin: 0 auto;
-    width: 70vw;
+    width: 1140px;
     height: 100%;
     background-color: transparent; }
   body h1 {
@@ -110,9 +118,11 @@ body {
     padding: 40px 0 0;
     box-sizing: border-box;
     overflow-y: auto;
-    background: url(/RosslareRangers/public/images/bg01.jpg) center center/cover no-repeat; }
+    background: #191970 url(/RosslareRangers/public/images/bg01.jpg) center center/cover no-repeat; }
     body main .content {
       padding-top: 80px; }
+    body main #mobileMenu {
+      display: none; }
   body .fb-iconContainer {
     width: 40px;
     height: 40px;
@@ -129,13 +139,183 @@ body {
       width: 100%;
       height: auto; }
 
+/*
+
+##     ## ##
+ ##   ##  ##
+  ## ##   ##
+   ###    ##
+  ## ##   ##
+ ##   ##  ##
+##     ## ########
+
+*/
+/*
+
+##        ######
+##       ##    ##
+##       ##
+##       ##   ####
+##       ##    ##
+##       ##    ##
+########  ######
+
+*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  body .wrapper {
+    max-width: 960px; } }
+
+/*
+
+
+##     ##  ######      ######  ##     ##    ##     ## ########
+ ##   ##  ##    ##    ##    ## ###   ###    ###   ### ##     ##
+  ## ##   ##          ##       #### ####    #### #### ##     ##
+   ###     ######      ######  ## ### ##    ## ### ## ##     ##
+  ## ##         ##          ## ##     ##    ##     ## ##     ##
+ ##   ##  ##    ##    ##    ## ##     ##    ##     ## ##     ##
+##     ##  ######      ######  ##     ##    ##     ## ########
+
+
+*/
+@media screen and (max-width: 991px) {
+  body main .fb-iconContainer {
+    display: none; }
+  body main #mobileMenu {
+    display: block;
+    height: calc(100vh - 60px);
+    width: 100%;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, width .35s; }
+    body main #mobileMenu:before {
+      content: '';
+      background-color: #191970;
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      top: 0;
+      left: -55%;
+      transition: left .35s ease; }
+    body main #mobileMenu:after {
+      content: '';
+      background-color: #191970;
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      top: 0;
+      right: -55%;
+      transition: right .35s ease; }
+    body main #mobileMenu.open {
+      visibility: visible; }
+      body main #mobileMenu.open:before {
+        left: 0; }
+      body main #mobileMenu.open:after {
+        right: 0; }
+      body main #mobileMenu.open li {
+        animation: fadeInRight 0.5s ease forwards;
+        animation-delay: 0.3s; }
+        body main #mobileMenu.open li:nth-of-type(2) {
+          animation-delay: 0.4s; }
+        body main #mobileMenu.open li:nth-of-type(3) {
+          animation-delay: 0.5s; }
+        body main #mobileMenu.open li:nth-of-type(4) {
+          animation-delay: 0.6s; }
+        body main #mobileMenu.open li:nth-of-type(5) {
+          animation-delay: 0.7s; }
+        body main #mobileMenu.open li:nth-of-type(6) {
+          animation-delay: 0.8s; }
+        body main #mobileMenu.open li:nth-of-type(7) {
+          animation-delay: 0.9s; }
+        body main #mobileMenu.open li:nth-of-type(8) {
+          animation-delay: 1s; }
+    body main #mobileMenu li {
+      box-sizing: border-box;
+      width: 100%;
+      height: calc(12.5vh - 7.25px);
+      padding: 0;
+      margin: 0;
+      display: block;
+      color: #ffcc22;
+      font-size: 16px;
+      line-height: 100%;
+      font-family: 'Open Sans';
+      text-align: center;
+      text-decoration: none;
+      z-index: 10;
+      opacity: 0;
+      position: relative;
+      cursor: pointer; }
+      body main #mobileMenu li:before {
+        display: none; }
+      body main #mobileMenu li a {
+        color: #ffcc22;
+        text-decoration: none; } }
+
+/*
+
+##     ## ########
+###   ### ##     ##
+#### #### ##     ##
+## ### ## ##     ##
+##     ## ##     ##
+##     ## ##     ##
+##     ## ########
+
+*/
+@media (min-width: 768px) and (max-width: 991px) {
+  body .wrapper {
+    max-width: 720px; }
+  body main #mobileMenu li {
+    font-size: 24px; } }
+
+/*
+
+  ######  ##     ##
+ ##    ## ###   ###
+ ##       #### ####
+  ######  ## ### ##
+       ## ##     ##
+ ##    ## ##     ##
+  ######  ##     ##
+
+*/
+@media (min-width: 576px) and (max-width: 767px) {
+  body .wrapper {
+    max-width: 540px; }
+  body main #mobileMenu li {
+    font-size: 18px; } }
+
+/*
+
+##     ##  ######
+ ##   ##  ##    ##
+  ## ##   ##
+   ###     ######
+  ## ##         ##
+ ##   ##  ##    ##
+##     ##  ######
+
+*/
+@media (max-width: 575px) {
+  body .wrapper {
+    width: auto;
+    max-width: 100%;
+    margin: 0 10px; }
+  body main #mobileMenu li {
+    font-size: 16px; } }
+
 header {
   z-index: 5;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 8vh;
+  height: 80px;
   background-color: midnightblue;
   border-bottom: 3px solid #ffcc22;
   box-sizing: border-box;
@@ -147,13 +327,16 @@ header {
     transform: translateX(-50%);
     width: 140px;
     height: 140px;
-    z-index: 10; }
+    z-index: 100; }
   header nav {
     display: flex;
     justify-content: space-between; }
     header nav ul {
-      margin: 3vh 0;
+      margin: 30px 0;
       float: right; }
+      header nav ul#rightMenu li {
+        margin-right: 0;
+        margin-left: 20px; }
       header nav ul li {
         display: inline;
         color: #ffcc22;
@@ -162,7 +345,7 @@ header {
         cursor: pointer;
         position: relative;
         font-family: 'Open Sans', sans-serif;
-        font-size: 14px; }
+        font-size: 16px; }
         header nav ul li:before {
           content: "";
           position: absolute;
@@ -186,46 +369,117 @@ header {
         header nav ul li a:active {
           color: #ffcc22;
           text-decoration: none; }
+  header .navicon {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 100%; }
+    header .navicon .menu-global {
+      backface-visibility: hidden;
+      position: absolute;
+      left: 0;
+      border-top: 4px solid #ffcc22;
+      width: 100%;
+      transition: 0.55s; }
+      header .navicon .menu-global.menu-top {
+        top: 15px; }
+        header .navicon .menu-global.menu-top.menu-top-click {
+          backface-visibility: hidden;
+          top: 25px;
+          transform: rotate(45deg);
+          transition: 0.55s 0.5s; }
+      header .navicon .menu-global.menu-middle {
+        top: 25px; }
+        header .navicon .menu-global.menu-middle.menu-middle-click {
+          opacity: 0; }
+      header .navicon .menu-global.menu-bottom {
+        top: 35px; }
+        header .navicon .menu-global.menu-bottom.menu-bottom-click {
+          backface-visibility: hidden;
+          top: 25px;
+          transform: rotate(-405deg);
+          transition: 0.55s 0.5s; }
 
 /*
 
-##     ## ########
-###   ### ##     ##
-#### #### ##     ##
-## ### ## ##     ##
-##     ## ##     ##
-##     ## ##     ##
-##     ## ########
+##        ######
+##       ##    ##
+##       ##
+##       ##   ####
+##       ##    ##
+##       ##    ##
+########  ######
 
 */
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   header .crest {
     width: 100px;
     height: 100px;
     top: 16px; }
-  header ul li {
-    font-size: 12px; } }
+  header nav ul li {
+    font-size: 14px; } }
 
 /*
 
-##     ##  ######      ######  ##     ##
- ##   ##  ##    ##    ##    ## ###   ###
-  ## ##   ##          ##       #### ####
-   ###     ######      ######  ## ### ##
-  ## ##         ##          ## ##     ##
- ##   ##  ##    ##    ##    ## ##     ##
-##     ##  ######      ######  ##     ##
+
+##     ##  ######      ######  ##     ##    ##     ## ########
+ ##   ##  ##    ##    ##    ## ###   ###    ###   ### ##     ##
+  ## ##   ##          ##       #### ####    #### #### ##     ##
+   ###     ######      ######  ## ### ##    ## ### ## ##     ##
+  ## ##         ##          ## ##     ##    ##     ## ##     ##
+ ##   ##  ##    ##    ##    ## ##     ##    ##     ## ##     ##
+##     ##  ######      ######  ##     ##    ##     ## ########
+
 
 */
 @media screen and (max-width: 991px) {
-  header .crest {
-    width: 100px;
-    height: 100px;
-    top: 3vh;
-    left: 50%;
-    transform: translateX(-50%); }
-  header #topMenu {
-    display: none; } }
+  header {
+    height: 60px; }
+    header .crest {
+      width: 100px;
+      height: 100px;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all 1s ease; }
+      header .crest.mobileMenuOpen {
+        width: 50px;
+        height: 50px;
+        top: 3px; }
+    header #topMenu {
+      display: none; }
+    header .navicon {
+      display: block; } }
+
+/*
+
+##     ##  ######
+ ##   ##  ##    ##
+  ## ##   ##
+   ###     ######
+  ## ##         ##
+ ##   ##  ##    ##
+##     ##  ######
+
+*/
+@media (max-width: 575px) {
+  header {
+    border-top-width: 2px; }
+    header .crest {
+      width: 80px;
+      height: 80px; }
+    header .navicon {
+      margin-left: 5px;
+      width: 20px; }
+      header .navicon .menu-global {
+        border-top-width: 3px; }
+        header .navicon .menu-global.menu-top {
+          top: 20px; }
+        header .navicon .menu-global.menu-middle {
+          top: 27px; }
+        header .navicon .menu-global.menu-bottom {
+          top: 34px; } }
 
 footer {
   position: fixed;
@@ -268,7 +522,8 @@ footer {
       margin-bottom: 60px;
       font-family: 'Voces'; }
   .homePage .results {
-    margin-top: 55px; }
+    margin-top: 55px;
+    margin-bottom: 60px; }
     .homePage .results p {
       text-align: center; }
     .homePage .results img {
