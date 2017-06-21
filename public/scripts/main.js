@@ -15,9 +15,9 @@ var changeContent = function (event) {
         if (newContentPath === 'clubinfo'){
             initMap();
         }
-        if (newContentPath === 'gallery'){
-            gridify();
-        }
+        // if (newContentPath === 'gallery'){
+        //     gridify();
+        // }
     };
     xhr.send();
 }
@@ -63,8 +63,13 @@ function gridify() {
 
 /* CODE OF RESPECT */
 
-var $codeHeader = $('.codeHeader');
-
-$codeHeader.on('click', function () {
-
+$('body').on('click', '.codeGroup', function (e) {
+    e.preventDefault();
+    var $code = $('.code');
+    var $codeGroup = $('.codeGroup');
+    $codeGroup.removeClass('current');
+    $code.hide();
+    var link = $(this).data(link);
+    $(this).addClass('current');
+    $('#' + link.link).show();
 });

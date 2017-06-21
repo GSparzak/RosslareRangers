@@ -1,62 +1,96 @@
 .codeofrespect {
 
-    .codeHeader {
-        max-width: 800px;
-        margin: 0 auto;
+    .codeFlex {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
 
-        a:link,
-        a:visited {
-            padding: 15px 50px;
+        .codeAside {
+            width: 20%;
+            border-right: 1px solid $main-yellow;
+            margin-right: 40px;
+
+            ul {
+                margin-top: 16px;
+
+                li {
+
+                    margin-bottom: 30px;
+                    text-align: right;
+                    padding-right: 30px;
+
+                    &.current {
+
+                        span {
+                            color: #fff;
+
+                            &:before {
+                                background-color: #fff;
+                            }
+                        }
+                    }
+
+                    span {
+                        color: $main-yellow;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 18px;
+                        font-weight: 400;
+                        cursor: pointer;
+                        margin: 0;
+                        padding: 0;
+                        position: relative;
+
+
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 1px;
+                            bottom: -2px;
+                            left: 0;
+                            background-color: #ffcc22;
+                            visibility: hidden;
+                            transform: scaleX(0);
+                            -webkit-transform: scale(0);
+                            transition: all 0.3s ease-in-out 0s;
+                            -webkit-transition: all 0.3s ease-in-out 0s;
+                        }
+
+                        &:hover:before {
+                            visibility: visible;
+                            transform: scaleX(1);
+                            -webkit-transform: scaleX(1);
+                        }
+                    }
+                }
+            }
+            //end ul
+        }
+        //end codeAside
+
+        .code {
+            display: none;
+            width: 80%;
             color: #fff;
-            border: 2px solid #fff;
-            border-radius: 3px;
-            background-color: $main-blue;
             font-family: 'Open Sans', sans-serif;
-            font-size: 16px;
-            text-decoration: none;
-        }
 
-        a:hover {
-            color: $main-yellow;
-            border: 2px solid $main-yellow;
-            // border-radius: 3px;
-            background-color: $main-blue;
-        }
+            &:nth-of-type(1) {
+                display: block;
+            }
 
-        a:active {
-            color: $main-blue;
-            border: 2px solid $main-blue;
-            // border-radius: 3px;
-            background-color: $main-yellow;
-        }
-    }
-    //end codeHeader
+            p {
+                text-align: left;
+                font-weight: 400;
+            }
 
-    .code {
-        display: none;
-        max-width: 800px;
-        margin: 40px auto 100px;
-        color: #fff;
-        font-family: 'Open Sans', sans-serif;
+            ul {
+                padding-left: 20px;
 
-        &:first-of-type {
-            display: block;
-        }
-
-        h2 {
-            text-align: left;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            padding-left: 20px;
-
-            li {
-                padding: 5px 0;
-                line-height: 1.4;
-                list-style-type: circle;
+                li {
+                    padding: 5px 0;
+                    line-height: 1.4;
+                    list-style-type: circle;
+                }
             }
         }
     }

@@ -81,13 +81,13 @@ body {
     color: #ffcc22; }
   body h2 {
     text-align: center;
-    font-size: 1.8em;
+    font-size: 28px;
     padding-top: 2vh;
     margin-bottom: 6vh;
     font-family: 'Voces', cursive;
     color: #ffcc22; }
   body h3 {
-    font-size: 1.3em;
+    font-size: 20px;
     margin: 30px 0 20px;
     font-family: 'Voces', cursive;
     color: #ffcc22; }
@@ -302,7 +302,7 @@ footer {
       .gymAstroturf .astroturf a img {
         width: 100%;
         height: auto;
-        border: 3px solid #fc2;
+        border: 2px solid #fc2;
         border-radius: 3px; }
 
 .honours,
@@ -357,7 +357,7 @@ footer {
         height: auto; }
     .clubInfoFlex .info .mapContainer {
       width: 100%;
-      border: 3px solid #fc2;
+      border: 2px solid #fc2;
       border-radius: 3px;
       padding-bottom: 60%;
       position: relative;
@@ -379,7 +379,7 @@ footer {
   .clubInfoFlex + .links {
     margin-bottom: 100px; }
   .clubInfoFlex img {
-    border: 3px solid #fc2;
+    border: 2px solid #fc2;
     border-radius: 3px; }
 
 .links {
@@ -397,47 +397,75 @@ footer {
   margin-bottom: 100px; }
   .gallery p {
     padding-left: 15px;
-    padding-right: 15px;
-    text-align: center; }
+    padding-right: 15px; }
+  .gallery .photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; }
+    .gallery .photos a {
+      box-sizing: border-box;
+      width: 25%;
+      padding: 15px; }
+      .gallery .photos a img {
+        width: 100%;
+        height: auto; }
 
-.codeofrespect .codeHeader {
-  max-width: 800px;
-  margin: 0 auto;
+.codeofrespect .codeFlex {
   display: flex;
-  justify-content: space-between; }
-  .codeofrespect .codeHeader a:link,
-  .codeofrespect .codeHeader a:visited {
-    padding: 15px 50px;
+  justify-content: flex-start; }
+  .codeofrespect .codeFlex .codeAside {
+    width: 20%;
+    border-right: 1px solid #ffcc22;
+    margin-right: 40px; }
+    .codeofrespect .codeFlex .codeAside ul {
+      margin-top: 16px; }
+      .codeofrespect .codeFlex .codeAside ul li {
+        margin-bottom: 30px;
+        text-align: right;
+        padding-right: 30px; }
+        .codeofrespect .codeFlex .codeAside ul li.current span {
+          color: #fff; }
+          .codeofrespect .codeFlex .codeAside ul li.current span:before {
+            background-color: #fff; }
+        .codeofrespect .codeFlex .codeAside ul li span {
+          color: #ffcc22;
+          font-family: 'Open Sans', sans-serif;
+          font-size: 18px;
+          font-weight: 400;
+          cursor: pointer;
+          margin: 0;
+          padding: 0;
+          position: relative; }
+          .codeofrespect .codeFlex .codeAside ul li span:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #ffcc22;
+            visibility: hidden;
+            transform: scaleX(0);
+            -webkit-transform: scale(0);
+            transition: all 0.3s ease-in-out 0s;
+            -webkit-transition: all 0.3s ease-in-out 0s; }
+          .codeofrespect .codeFlex .codeAside ul li span:hover:before {
+            visibility: visible;
+            transform: scaleX(1);
+            -webkit-transform: scaleX(1); }
+  .codeofrespect .codeFlex .code {
+    display: none;
+    width: 80%;
     color: #fff;
-    border: 2px solid #fff;
-    border-radius: 3px;
-    background-color: #191970;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    text-decoration: none; }
-  .codeofrespect .codeHeader a:hover {
-    color: #ffcc22;
-    border: 2px solid #ffcc22;
-    background-color: #191970; }
-  .codeofrespect .codeHeader a:active {
-    color: #191970;
-    border: 2px solid #191970;
-    background-color: #ffcc22; }
-
-.codeofrespect .code {
-  display: none;
-  max-width: 800px;
-  margin: 40px auto 100px;
-  color: #fff;
-  font-family: 'Open Sans', sans-serif; }
-  .codeofrespect .code:first-of-type {
-    display: block; }
-  .codeofrespect .code h2 {
-    text-align: left;
-    margin-bottom: 20px; }
-  .codeofrespect .code ul {
-    padding-left: 20px; }
-    .codeofrespect .code ul li {
-      padding: 5px 0;
-      line-height: 1.4;
-      list-style-type: circle; }
+    font-family: 'Open Sans', sans-serif; }
+    .codeofrespect .codeFlex .code:nth-of-type(1) {
+      display: block; }
+    .codeofrespect .codeFlex .code p {
+      text-align: left;
+      font-weight: 400; }
+    .codeofrespect .codeFlex .code ul {
+      padding-left: 20px; }
+      .codeofrespect .codeFlex .code ul li {
+        padding: 5px 0;
+        line-height: 1.4;
+        list-style-type: circle; }
