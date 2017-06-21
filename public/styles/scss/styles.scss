@@ -1,3 +1,34 @@
+//COLOURS
+$main-yellow: #ffcc22;
+$main-blue: #191970;
+
+//RESOLUTIONS
+$screen-xs-max: 575px;
+$screen-sm-min: 576px;
+$screen-sm-max: 767px;
+$screen-md-min: 768px;
+$screen-md-max: 991px;
+$screen-lg-min: 992px;
+$screen-lg-max: 1199px;
+$screen-xl-min: 1200px;
+$screen-xl-max: 1599px;
+$screen-xxl-min: 1600px;
+
+//KEYFRAMES
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+//IMPORTS
+
 @import "_keyframes";
 @import "_reset";
 @import "_shared";

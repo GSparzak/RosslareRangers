@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rosslare Rangers A.F.C.</title>
     <link rel="shortcut icon" href="public/images/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Voces" rel="stylesheet">
-    <link rel="stylesheet" href="/RosslareRangers/public/libs/lightbox/lightbox.min.css">
-    <link rel="stylesheet" href="/RosslareRangers/public/styles/css/styles.css">
+    <link rel="stylesheet" href="public/libs/lightbox/lightbox.min.css">
+    <link rel="stylesheet" href="public/styles/css/styles.css">
 </head>
 <body>
     <header>
         <div class="wrapper">
-            <a href="/RosslareRangers/"><img class="crest" src="/RosslareRangers/public/images/rangers_crest.png" alt="Rosslare Rangers A.F.C."></a>
-            <nav>
+            <a href="/RosslareRangers/"><img class="crest" src="public/images/rangers_crest.png" alt="Rosslare Rangers A.F.C."></a>
+            <nav id="topMenu">
                 <ul id="leftMenu">
                     <li data-link="teams" class="nav">TEAMS</li>
                     <li data-link="history" class="nav">HISTORY</li>
@@ -26,6 +27,11 @@
                     <li data-link="clubinfo" class="nav">CLUB INFO</li>
                 </ul>
             </nav>
+            <div class="navicon" id="navicon">
+                <span class="menu-global menu-top"></span>
+                <span class="menu-global menu-middle"></span>
+                <span class="menu-global menu-bottom"></span>
+            </div>
         </div>
     </header>
     <main>
@@ -45,16 +51,27 @@
                             <a href="www.fai.ie" target="_blank"><img src="public/images/fai.png" alt=""></a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
         <a href="https://www.facebook.com/groups/234442126960969/" target="_blank" class="fb-iconContainer">
             <img src="public/images/FB-f-Logo__blue_50.png" alt="Find us on Facebook">
         </a>
+        <nav id="mobileMenu">
+            <ul>
+                <li data-link="teams" class="nav">TEAMS</li>
+                <li data-link="history" class="nav">HISTORY</li>
+                <li data-link="honours" class="nav">HONOURS</li>
+                <li data-link="code" class="nav">CODE OF RESPECT</li>
+                <li data-link="gymastroturf" class="nav">GYM &amp; ASTROTURF</li>
+                <li data-link="gallery" class="nav">GALLERY</li>
+                <li><a href="http://www.balondirect.com/index.php/catalog/category/view/s/rosslare-rangers-afc/id/125/" target="_blank" class="" title="SHOP">SHOP</a></li>
+                <li data-link="clubinfo" class="nav">CLUB INFO</li>
+            </ul>
+        </nav>
     </main>
     <footer>
-        <span class="text info">© Rosslare Rangers A.F.C.</span>
+        <span class="text info">© Rosslare Rangers&nbsp;A.F.C.</span>
         <span class="text info"> Designed by <a href="https://gsparzak.github.io" target="_blank">Grzegorz Sparzak</a></span>
     </footer>
 
