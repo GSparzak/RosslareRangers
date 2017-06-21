@@ -63,6 +63,10 @@ body {
         .content {
             padding-top: 80px;
         }
+
+        #mobileMenu {
+            display: none;
+        }
     }
 
     .fb-iconContainer {
@@ -125,42 +129,20 @@ body {
 
 /*
 
-##     ## ########
-###   ### ##     ##
-#### #### ##     ##
-## ### ## ##     ##
-##     ## ##     ##
-##     ## ##     ##
-##     ## ########
 
-*/
-@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-    body {
+##     ##  ######      ######  ##     ##    ##     ## ########
+ ##   ##  ##    ##    ##    ## ###   ###    ###   ### ##     ##
+  ## ##   ##          ##       #### ####    #### #### ##     ##
+   ###     ######      ######  ## ### ##    ## ### ## ##     ##
+  ## ##         ##          ## ##     ##    ##     ## ##     ##
+ ##   ##  ##    ##    ##    ## ##     ##    ##     ## ##     ##
+##     ##  ######      ######  ##     ##    ##     ## ########
 
-        .wrapper {
-            max-width: 720px;
-        }
-    }
-}
-
-/*
-
-##     ##  ######      ######  ##     ##
- ##   ##  ##    ##    ##    ## ###   ###
-  ## ##   ##          ##       #### ####
-   ###     ######      ######  ## ### ##
-  ## ##         ##          ## ##     ##
- ##   ##  ##    ##    ##    ## ##     ##
-##     ##  ######      ######  ##     ##
 
 */
 
-@media (max-width: $screen-sm-max) {
+@media screen and (max-width: 991px){
     body {
-
-        .wrapper {
-            max-width: 540px;
-        }
 
         main {
 
@@ -169,6 +151,7 @@ body {
             }
 
             #mobileMenu {
+                display: block;
                 height: calc(100vh - 60px);
                 width: 100%;
                 padding: 0;
@@ -240,15 +223,18 @@ body {
                     }
                 }
 
+
                 li {
                     box-sizing: border-box;
                     width: 100%;
                     height:calc(12.5vh - 7.25px);
-                    // padding: 25px 0;
+                    padding: 0;
                     margin: 0;
                     display: block;
                     color: $main-yellow;
-                    font: 16px/100% 'Open Sans';
+                    font-size: 16px;
+                    line-height: 100%;
+                    font-family: 'Open Sans';
                     text-align: center;
                     text-decoration: none;
                     z-index: 10;
@@ -270,6 +256,65 @@ body {
             //end #mobileMenu
         }
         //end main
+    }
+}
+
+/*
+
+##     ## ########
+###   ### ##     ##
+#### #### ##     ##
+## ### ## ##     ##
+##     ## ##     ##
+##     ## ##     ##
+##     ## ########
+
+*/
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    body {
+
+        .wrapper {
+            max-width: 720px;
+        }
+
+        main {
+            #mobileMenu {
+
+                li {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+/*
+
+  ######  ##     ##
+ ##    ## ###   ###
+ ##       #### ####
+  ######  ## ### ##
+       ## ##     ##
+ ##    ## ##     ##
+  ######  ##     ##
+
+*/
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    body {
+
+        .wrapper {
+            max-width: 540px;
+        }
+
+        main {
+            #mobileMenu {
+
+                li {
+                    font-size: 18px;
+                }
+            }
+        }
     }
     //end body
 }
@@ -299,7 +344,6 @@ body {
             #mobileMenu {
 
                 li {
-                    padding: 10px 0;
                     font-size: 16px;
                 }
             }

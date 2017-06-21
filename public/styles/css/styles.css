@@ -121,6 +121,8 @@ body {
     background: #191970 url(/RosslareRangers/public/images/bg01.jpg) center center/cover no-repeat; }
     body main .content {
       padding-top: 80px; }
+    body main #mobileMenu {
+      display: none; }
   body .fb-iconContainer {
     width: 40px;
     height: 40px;
@@ -165,36 +167,22 @@ body {
 
 /*
 
-##     ## ########
-###   ### ##     ##
-#### #### ##     ##
-## ### ## ##     ##
-##     ## ##     ##
-##     ## ##     ##
-##     ## ########
+
+##     ##  ######      ######  ##     ##    ##     ## ########
+ ##   ##  ##    ##    ##    ## ###   ###    ###   ### ##     ##
+  ## ##   ##          ##       #### ####    #### #### ##     ##
+   ###     ######      ######  ## ### ##    ## ### ## ##     ##
+  ## ##         ##          ## ##     ##    ##     ## ##     ##
+ ##   ##  ##    ##    ##    ## ##     ##    ##     ## ##     ##
+##     ##  ######      ######  ##     ##    ##     ## ########
+
 
 */
-@media (min-width: 768px) and (max-width: 991px) {
-  body .wrapper {
-    max-width: 720px; } }
-
-/*
-
-##     ##  ######      ######  ##     ##
- ##   ##  ##    ##    ##    ## ###   ###
-  ## ##   ##          ##       #### ####
-   ###     ######      ######  ## ### ##
-  ## ##         ##          ## ##     ##
- ##   ##  ##    ##    ##    ## ##     ##
-##     ##  ######      ######  ##     ##
-
-*/
-@media (max-width: 767px) {
-  body .wrapper {
-    max-width: 540px; }
+@media screen and (max-width: 991px) {
   body main .fb-iconContainer {
     display: none; }
   body main #mobileMenu {
+    display: block;
     height: calc(100vh - 60px);
     width: 100%;
     padding: 0;
@@ -249,10 +237,13 @@ body {
       box-sizing: border-box;
       width: 100%;
       height: calc(12.5vh - 7.25px);
+      padding: 0;
       margin: 0;
       display: block;
       color: #ffcc22;
-      font: 16px/100% 'Open Sans';
+      font-size: 16px;
+      line-height: 100%;
+      font-family: 'Open Sans';
       text-align: center;
       text-decoration: none;
       z-index: 10;
@@ -264,6 +255,40 @@ body {
       body main #mobileMenu li a {
         color: #ffcc22;
         text-decoration: none; } }
+
+/*
+
+##     ## ########
+###   ### ##     ##
+#### #### ##     ##
+## ### ## ##     ##
+##     ## ##     ##
+##     ## ##     ##
+##     ## ########
+
+*/
+@media (min-width: 768px) and (max-width: 991px) {
+  body .wrapper {
+    max-width: 720px; }
+  body main #mobileMenu li {
+    font-size: 24px; } }
+
+/*
+
+  ######  ##     ##
+ ##    ## ###   ###
+ ##       #### ####
+  ######  ## ### ##
+       ## ##     ##
+ ##    ## ##     ##
+  ######  ##     ##
+
+*/
+@media (min-width: 576px) and (max-width: 767px) {
+  body .wrapper {
+    max-width: 540px; }
+  body main #mobileMenu li {
+    font-size: 18px; } }
 
 /*
 
@@ -282,7 +307,6 @@ body {
     max-width: 100%;
     margin: 0 10px; }
   body main #mobileMenu li {
-    padding: 10px 0;
     font-size: 16px; } }
 
 header {
@@ -308,9 +332,9 @@ header {
     display: flex;
     justify-content: space-between; }
     header nav ul {
-      margin: 3vh 0;
+      margin: 30px 0;
       float: right; }
-      header nav ul.rightMenu li {
+      header nav ul#rightMenu li {
         margin-right: 0;
         margin-left: 20px; }
       header nav ul li {
@@ -348,7 +372,6 @@ header {
   header .navicon {
     display: none;
     cursor: pointer;
-    padding-top: 20px;
     position: relative;
     width: 30px;
     height: 100%; }
@@ -389,18 +412,7 @@ header {
 ########  ######
 
 */
-/*
-
-##     ## ########
-###   ### ##     ##
-#### #### ##     ##
-## ### ## ##     ##
-##     ## ##     ##
-##     ## ##     ##
-##     ## ########
-
-*/
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   header .crest {
     width: 100px;
     height: 100px;
@@ -410,13 +422,15 @@ header {
 
 /*
 
-##     ##  ######      ######  ##     ##
- ##   ##  ##    ##    ##    ## ###   ###
-  ## ##   ##          ##       #### ####
-   ###     ######      ######  ## ### ##
-  ## ##         ##          ## ##     ##
- ##   ##  ##    ##    ##    ## ##     ##
-##     ##  ######      ######  ##     ##
+
+##     ##  ######      ######  ##     ##    ##     ## ########
+ ##   ##  ##    ##    ##    ## ###   ###    ###   ### ##     ##
+  ## ##   ##          ##       #### ####    #### #### ##     ##
+   ###     ######      ######  ## ### ##    ## ### ## ##     ##
+  ## ##         ##          ## ##     ##    ##     ## ##     ##
+ ##   ##  ##    ##    ##    ## ##     ##    ##     ## ##     ##
+##     ##  ######      ######  ##     ##    ##     ## ########
+
 
 */
 @media screen and (max-width: 991px) {
@@ -435,7 +449,7 @@ header {
         top: 3px; }
     header #topMenu {
       display: none; }
-    header #navicon {
+    header .navicon {
       display: block; } }
 
 /*
@@ -450,9 +464,22 @@ header {
 
 */
 @media (max-width: 575px) {
-  header .crest {
-    width: 80px;
-    height: 80px; } }
+  header {
+    border-top-width: 2px; }
+    header .crest {
+      width: 80px;
+      height: 80px; }
+    header .navicon {
+      margin-left: 5px;
+      width: 20px; }
+      header .navicon .menu-global {
+        border-top-width: 3px; }
+        header .navicon .menu-global.menu-top {
+          top: 20px; }
+        header .navicon .menu-global.menu-middle {
+          top: 27px; }
+        header .navicon .menu-global.menu-bottom {
+          top: 34px; } }
 
 footer {
   position: fixed;
@@ -494,7 +521,8 @@ footer {
       margin-bottom: 60px;
       font-family: 'Voces'; }
   .homePage .results {
-    margin-top: 55px; }
+    margin-top: 55px;
+    margin-bottom: 60px; }
     .homePage .results p {
       text-align: center; }
     .homePage .results img {

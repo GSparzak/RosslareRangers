@@ -25,10 +25,10 @@ header {
         justify-content: space-between;
 
         ul {
-            margin: 3vh 0;
+            margin: 30px 0;
             float: right;
 
-            &.rightMenu {
+            &#rightMenu {
                 li {
                     margin-right: 0;
                     margin-left: 20px;
@@ -84,7 +84,6 @@ header {
     .navicon {
         display: none;
         cursor: pointer;
-        padding-top: 20px;
         position: relative;
         width: 30px;
         height: 100%;
@@ -142,22 +141,6 @@ header {
 */
 
 @media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
-
-}
-
-/*
-
-##     ## ########
-###   ### ##     ##
-#### #### ##     ##
-## ### ## ##     ##
-##     ## ##     ##
-##     ## ##     ##
-##     ## ########
-
-*/
-
-@media screen and (min-width: 992px) and (max-width: 1199px) {
     header {
         .crest {
             width: 100px;
@@ -176,15 +159,18 @@ header {
     }
 }
 
+
 /*
 
-##     ##  ######      ######  ##     ##
- ##   ##  ##    ##    ##    ## ###   ###
-  ## ##   ##          ##       #### ####
-   ###     ######      ######  ## ### ##
-  ## ##         ##          ## ##     ##
- ##   ##  ##    ##    ##    ## ##     ##
-##     ##  ######      ######  ##     ##
+
+##     ##  ######      ######  ##     ##    ##     ## ########
+ ##   ##  ##    ##    ##    ## ###   ###    ###   ### ##     ##
+  ## ##   ##          ##       #### ####    #### #### ##     ##
+   ###     ######      ######  ## ### ##    ## ### ## ##     ##
+  ## ##         ##          ## ##     ##    ##     ## ##     ##
+ ##   ##  ##    ##    ##    ## ##     ##    ##     ## ##     ##
+##     ##  ######      ######  ##     ##    ##     ## ########
+
 
 */
 
@@ -213,7 +199,7 @@ header {
             display: none;
         }
 
-        #navicon {
+        .navicon {
             display: block;
         }
     }
@@ -233,10 +219,32 @@ header {
 
 @media (max-width: $screen-xs-max) {
     header {
+        border-top-width: 2px;
 
         .crest {
             width: 80px;
             height: 80px;
+        }
+
+        .navicon {
+            margin-left: 5px;
+            width: 20px;
+
+            .menu-global {
+                border-top-width: 3px;
+
+                &.menu-top {
+                    top: 20px
+                }
+
+                &.menu-middle {
+                    top: 27px;
+                }
+
+                &.menu-bottom {
+                    top: 34px;
+                }
+            }
         }
     }
 }
