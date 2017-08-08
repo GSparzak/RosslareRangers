@@ -30,4 +30,157 @@
             display: inline;
         }
     }
+
+    .copyright {
+        display: none;
+    }
+}
+
+/*
+
+##     ## ##
+ ##   ##  ##
+  ## ##   ##
+   ###    ##
+  ## ##   ##
+ ##   ##  ##
+##     ## ########
+
+*/
+
+@media (min-width: $screen-xl-min) and (max-width: $screen-xl-max) {
+
+}
+
+/*
+
+##        ######
+##       ##    ##
+##       ##
+##       ##   ####
+##       ##    ##
+##       ##    ##
+########  ######
+
+*/
+
+@media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+    .homePage {
+        padding-top: 120px;
+
+        p {
+            font-size: 16px;
+
+            &.welcome {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+
+/*
+
+##     ## ########
+###   ### ##     ##
+#### #### ##     ##
+## ### ## ##     ##
+##     ## ##     ##
+##     ## ##     ##
+##     ## ########
+
+*/
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    .homePage {
+        padding-top: 80px;
+
+        p {
+            font-size: 16px;
+
+            &.welcome {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+/*
+
+  ######  ##     ##
+ ##    ## ###   ###
+ ##       #### ####
+  ######  ## ### ##
+       ## ##     ##
+ ##    ## ##     ##
+  ######  ##     ##
+
+*/
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    .homePage {
+        padding-top: 80px;
+
+        p {
+            font-size: 14px;
+
+            &.welcome {
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .results {
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        .copyright {
+            display: block;
+            text-align: center;
+            color: #fff;
+            font-size: 12px;
+            margin: 40px 0;
+        }
+    }
+}
+
+/*
+
+##     ##  ######
+ ##   ##  ##    ##
+  ## ##   ##
+   ###     ######
+  ## ##         ##
+ ##   ##  ##    ##
+##     ##  ######
+
+*/
+
+@media (max-width: $screen-xs-max) {
+    .homePage {
+        padding-top: 60px;
+
+        p {
+            font-size: 14px;
+
+            &.welcome {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .results {
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        .copyright {
+            display: block;
+            text-align: center;
+            color: #fff;
+            font-size: 10px;
+            margin: 40px 0;
+        }
+    }
 }

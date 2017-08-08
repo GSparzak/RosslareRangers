@@ -79,7 +79,7 @@ body {
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
         position: absolute;
-        top: 35%;
+        top: 160px;
         left: 0;
 
         img {
@@ -124,6 +124,36 @@ body {
         .wrapper {
             max-width: 960px;
         }
+
+        h1 {
+            font-size: 55px;
+        }
+
+        h2 {
+
+        }
+
+        h3 {
+
+        }
+
+        h4 {
+
+        }
+
+        p {
+
+        }
+
+        main {
+            padding: 0;
+        }
+
+        .fb-iconContainer {
+            width: 30px;
+            height: 30px;
+            top: 120px;
+        }
     }
 }
 
@@ -144,7 +174,12 @@ body {
 @media screen and (max-width: 991px){
     body {
 
+        h1 {
+            font-size: 50px;
+        }
+
         main {
+            padding: 0;
 
             .fb-iconContainer {
                 display: none;
@@ -153,10 +188,11 @@ body {
             #mobileMenu {
                 display: block;
                 height: calc(100vh - 60px);
+                min-height: 400px;
                 width: 100%;
                 padding: 0;
                 position: fixed;
-                bottom: 0;
+                top: 60px;
                 left: 0;
                 z-index: 10;
                 visibility: hidden;
@@ -246,9 +282,22 @@ body {
                         display: none;
                     }
 
+                    span {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        white-space: nowrap;
+                    }
+
                     a {
                         color: $main-yellow;
                         text-decoration: none;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        white-space: nowrap;
                     }
                 }
 
@@ -272,6 +321,10 @@ body {
 */
 @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
     body {
+
+        .wrapper {
+            max-width: 960px;
+        }
 
         .wrapper {
             max-width: 720px;
@@ -302,6 +355,26 @@ body {
 
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     body {
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        h3 {
+            font-size: 16px;
+        }
+
+        h4 {
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 14px;
+        }
 
         .wrapper {
             max-width: 540px;
@@ -334,6 +407,27 @@ body {
 @media (max-width: $screen-xs-max) {
     body {
 
+        h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        h3 {
+            font-size: 15px;
+        }
+
+        h4 {
+            font-size: 14px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
         .wrapper {
             width: auto;
             max-width: 100%;
@@ -341,10 +435,46 @@ body {
         }
 
         main {
+
+            .content {
+                padding-top: 60px;
+            }
+
             #mobileMenu {
 
                 li {
                     font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+
+/*
+
+
+##     ##  ######     ##          ###    ##    ## ########
+ ##   ##  ##    ##    ##         ## ##   ###   ## ##     ##
+  ## ##   ##          ##        ##   ##  ####  ## ##     ##
+   ###     ######     ##       ##     ## ## ## ## ##     ##
+  ## ##         ##    ##       ######### ##  #### ##     ##
+ ##   ##  ##    ##    ##       ##     ## ##   ### ##     ##
+##     ##  ######     ######## ##     ## ##    ## ########
+
+
+*/
+
+@media (max-height: 400px) and (orientation: landscape) {
+    body {
+        main {
+            #mobileMenu {
+                ul {
+                    columns: 2;
+
+                    li {
+                        height: calc(20vh - 7.5px);
+                    }
                 }
             }
         }

@@ -21,3 +21,36 @@
         }
     }
 }
+
+/*
+
+
+##     ##  ######      ######  ##     ##
+ ##   ##  ##    ##    ##    ## ###   ###
+  ## ##   ##          ##       #### ####
+   ###     ######      ######  ## ### ##
+  ## ##         ##          ## ##     ##
+ ##   ##  ##    ##    ##    ## ##     ##
+##     ##  ######      ######  ##     ##
+
+
+*/
+
+@media (max-width: $screen-sm-max) {
+    .gymAstroturf {
+        flex-direction: column;
+        margin-bottom: 40px;
+
+        .gym,
+        .astroturf {
+            width: 100%;
+            margin: 0;
+
+            a {
+                img {
+                    border-width: 1px;
+                }
+            }
+        }
+    }
+}

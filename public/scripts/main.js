@@ -11,7 +11,7 @@ var mobileNavigation = document.getElementById('mobileMenu');
 var changeContent = function (event) {
     console.log(event);
     var content = document.getElementById('content');
-    newContentPath = event.srcElement.attributes[0].value;
+    newContentPath = event.srcElement.parentNode.attributes[0].value;
     var xhr= new XMLHttpRequest();
     xhr.open('GET', '/RosslareRangers/pages/' + newContentPath + '.html', true);
     xhr.onreadystatechange= function() {
@@ -31,7 +31,11 @@ var changeContent = function (event) {
 
 leftNavigation.addEventListener('click', changeContent, false);
 rightNavigation.addEventListener('click', changeContent, false);
-mobileNavigation.addEventListener('click', function(event) {changeContent(event); toggleMobileClasses();}, false);
+mobileNavigation.addEventListener('click', function(event) {
+    changeContent(event);
+    toggleMobileClasses();
+    Menu.activateMenu();
+}, false);
 
 
 /* GOOGLE MAP */
@@ -82,11 +86,7 @@ $('body').on('click', '.codeGroup', function (e) {
     $('#' + link.link).show();
 });
 
-/* MOBILE NAVIGATION */
-
-
-
-/* NAVICON */
+/* NAVICON ANIMATION*/
 
 var Menu = {
 

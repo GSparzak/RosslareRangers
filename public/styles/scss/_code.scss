@@ -1,4 +1,5 @@
 .codeofrespect {
+    margin-bottom: 40px;
 
     .codeFlex {
         display: flex;
@@ -6,7 +7,7 @@
 
         .codeAside {
             width: 20%;
-            border-right: 1px solid $main-yellow;
+            border-right: 1px solid #fff;
             margin-right: 40px;
 
             ul {
@@ -21,16 +22,16 @@
                     &.current {
 
                         span {
-                            color: #fff;
+                            color: $main-yellow;
 
                             &:before {
-                                background-color: #fff;
+                                background-color: $main-yellow;
                             }
                         }
                     }
 
                     span {
-                        color: $main-yellow;
+                        color: #fff;
                         font-family: 'Open Sans', sans-serif;
                         font-size: 18px;
                         font-weight: 400;
@@ -48,7 +49,7 @@
                             height: 1px;
                             bottom: -2px;
                             left: 0;
-                            background-color: #ffcc22;
+                            background-color: #fff;
                             visibility: hidden;
                             transform: scaleX(0);
                             -webkit-transform: scale(0);
@@ -90,6 +91,93 @@
                     padding: 5px 0;
                     line-height: 1.4;
                     list-style-type: circle;
+                }
+            }
+        }
+    }
+}
+
+/*
+
+  ######  ##     ##
+ ##    ## ###   ###
+ ##       #### ####
+  ######  ## ### ##
+       ## ##     ##
+ ##    ## ##     ##
+  ######  ##     ##
+
+*/
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    .codeofrespect {
+        .codeFlex {
+            .codeAside {
+                ul {
+                    li {
+
+                        span {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
+            .code {
+                ul {
+                    li {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+
+##     ##  ######
+ ##   ##  ##    ##
+  ## ##   ##
+   ###     ######
+  ## ##         ##
+ ##   ##  ##    ##
+##     ##  ######
+
+*/
+
+@media (max-width: $screen-xs-max) {
+    .codeofrespect {
+        margin-bottom: 60px;
+
+        .codeFlex {
+            flex-direction: column;
+
+            .codeAside {
+                width: 100%;
+                border: none;
+
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+
+                    li {
+                        padding-right: 0;
+
+                        span {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+
+            .code {
+                width: 100%;
+
+                ul {
+                    li {
+                        font-size: 14px;
+                    }
                 }
             }
         }
