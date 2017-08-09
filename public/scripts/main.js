@@ -9,11 +9,10 @@ var leftNavigation = document.getElementById('leftMenu');
 var rightNavigation = document.getElementById('rightMenu');
 var mobileNavigation = document.getElementById('mobileMenu');
 var changeContent = function (event) {
-    console.log(event);
     var content = document.getElementById('content');
-    newContentPath = event.srcElement.parentNode.attributes[0].value;
+    newContentPath = event.target.parentNode.attributes["data-link"].value;
     var xhr= new XMLHttpRequest();
-    xhr.open('GET', '/RosslareRangers/pages/' + newContentPath + '.html', true);
+    xhr.open('GET', '/pages/' + newContentPath + '.html', true);
     xhr.onreadystatechange= function() {
         if (this.readyState!==4) return;
         if (this.status!==200) return;
