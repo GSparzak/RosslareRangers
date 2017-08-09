@@ -17,7 +17,7 @@ var changeContent = function (event) {
         if (this.readyState!==4) return;
         if (this.status!==200) return;
         content.innerHTML= this.responseText;
-        content.scrollTop = 0;                          //TODO - not working
+        $('main').scrollTop(0);
         if (newContentPath === 'clubinfo'){
             initMap();
         }
