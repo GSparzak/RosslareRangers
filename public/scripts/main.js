@@ -12,7 +12,7 @@ var changeContent = function (event) {
     var content = document.getElementById('content');
     newContentPath = event.target.parentNode.attributes["data-link"].value;
     var xhr= new XMLHttpRequest();
-    xhr.open('GET', '/pages/' + newContentPath + '.html', true);
+    xhr.open('GET', '/RosslareRangers/pages/' + newContentPath + '.html', true);
     xhr.onreadystatechange= function() {
         if (this.readyState!==4) return;
         if (this.status!==200) return;
