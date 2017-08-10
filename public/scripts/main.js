@@ -10,18 +10,20 @@ var rightNavigation = document.getElementById('rightMenu');
 var mobileNavigation = document.getElementById('mobileMenu');
 var changeContent = function (event) {
     var content = document.getElementById('content');
-    newContentPath = event.target.parentNode.attributes["data-link"].value;
+    _href = event.target.parentNode.attributes["data-link"].value;
+    history.pushState(_href, null, _href);
+
     var xhr= new XMLHttpRequest();
-    xhr.open('GET', '/RosslareRangers/pages/' + newContentPath + '.html', true);
+    xhr.open('GET', '/pages/' + _href + '.html', true);
     xhr.onreadystatechange= function() {
         if (this.readyState!==4) return;
         if (this.status!==200) return;
         content.innerHTML= this.responseText;
         $('main').scrollTop(0);
-        if (newContentPath === 'clubinfo'){
+        if (_href === 'clubinfo'){
             initMap();
         }
-        // if (newContentPath === 'gallery'){
+        // if (_href === 'gallery'){
         //     gridify();
         // }
     };
@@ -36,6 +38,9 @@ mobileNavigation.addEventListener('click', function(event) {
     Menu.activateMenu();
 }, false);
 
+$(window).on('popstate', function (e) {
+    console.log(e.originalEvent.state);
+})
 
 /* GOOGLE MAP */
 
