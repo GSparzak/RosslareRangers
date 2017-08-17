@@ -1000,6 +1000,51 @@ footer {
         width: 100%;
         height: auto; }
 
+/*
+
+##     ## ########
+###   ### ##     ##
+#### #### ##     ##
+## ### ## ##     ##
+##     ## ##     ##
+##     ## ##     ##
+##     ## ########
+
+*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .gallery .photos a {
+    width: calc(100% / 3); } }
+
+/*
+
+  ######  ##     ##
+ ##    ## ###   ###
+ ##       #### ####
+  ######  ## ### ##
+       ## ##     ##
+ ##    ## ##     ##
+  ######  ##     ##
+
+*/
+@media (min-width: 576px) and (max-width: 767px) {
+  .gallery .photos a {
+    width: 50%; } }
+
+/*
+
+##     ##  ######
+ ##   ##  ##    ##
+  ## ##   ##
+   ###     ######
+  ## ##         ##
+ ##   ##  ##    ##
+##     ##  ######
+
+*/
+@media (max-width: 575px) {
+  .gallery .photos a {
+    width: 100%; } }
+
 .codeofrespect {
   margin-bottom: 40px; }
   .codeofrespect .codeFlex {

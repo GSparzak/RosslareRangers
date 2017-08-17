@@ -25,3 +25,72 @@
         }
     }
 }
+
+
+/*
+
+##     ## ########
+###   ### ##     ##
+#### #### ##     ##
+## ### ## ##     ##
+##     ## ##     ##
+##     ## ##     ##
+##     ## ########
+
+*/
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    .gallery {
+        .photos {
+            a {
+                width: calc(100% / 3);
+            }
+        }
+    }
+}
+
+
+/*
+
+  ######  ##     ##
+ ##    ## ###   ###
+ ##       #### ####
+  ######  ## ### ##
+       ## ##     ##
+ ##    ## ##     ##
+  ######  ##     ##
+
+*/
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    .gallery {
+        .photos {
+            a {
+                width: 50%;
+            }
+        }
+    }
+}
+
+
+/*
+
+##     ##  ######
+ ##   ##  ##    ##
+  ## ##   ##
+   ###     ######
+  ## ##         ##
+ ##   ##  ##    ##
+##     ##  ######
+
+*/
+
+@media (max-width: $screen-xs-max) {
+    .gallery {
+        .photos {
+            a {
+                width: 100%;
+            }
+        }
+    }
+}
