@@ -9,23 +9,27 @@ var leftNavigation = document.getElementById('leftMenu');
 var rightNavigation = document.getElementById('rightMenu');
 var mobileNavigation = document.getElementById('mobileMenu');
 var changeContent = function (event) {
-    var content = document.getElementById('content');
-    newContentPath = event.target.parentNode.attributes["data-link"].value;
-    var xhr= new XMLHttpRequest();
-    xhr.open('GET', '/RosslareRangers/pages/' + newContentPath + '.html', true);
-    xhr.onreadystatechange= function() {
-        if (this.readyState!==4) return;
-        if (this.status!==200) return;
-        content.innerHTML= this.responseText;
-        $('main').scrollTop(0);
-        if (newContentPath === 'clubinfo'){
-            initMap();
-        }
-        // if (newContentPath === 'gallery'){
-        //     gridify();
-        // }
-    };
-    xhr.send();
+    if (event.target != event.currentTarget) {
+        var content = document.getElementById('content');
+        link = event.target.parentNode.attributes["data-link"].value;
+        url = link + '.html'
+        var xhr= new XMLHttpRequest();
+        xhr.open('GET', '/RosslareRangers/pages/' + url, true);
+        xhr.onreadystatechange= function() {
+            if (this.readyState!==4) return;
+            if (this.status!==200) return;
+            content.innerHTML= this.responseText;
+            history.pushState(link, null, url);
+            $('main').scrollTop(0);
+            if (link === 'clubinfo'){
+                initMap();
+            }
+            // if (newContentPath === 'gallery'){
+            //     gridify();
+            // }
+        };
+        xhr.send();
+    }
 }
 
 leftNavigation.addEventListener('click', changeContent, false);
@@ -35,6 +39,30 @@ mobileNavigation.addEventListener('click', function(event) {
     toggleMobileClasses();
     Menu.activateMenu();
 }, false);
+window.addEventListener('popstate', function (e) {
+    var content = document.getElementById('content');
+    var link = e.state;
+    var subpage;
+    if (e.state === null) {
+        subpage = 'pages/main.html';
+    }
+    else {
+        subpage = 'pages/' + link + '.html';
+
+    }
+    var xhr= new XMLHttpRequest();
+    xhr.open('GET', '/RosslareRangers/' + subpage, true);
+    xhr.onreadystatechange= function() {
+        if (this.readyState!==4) return;
+        if (this.status!==200) return;
+        content.innerHTML= this.responseText;
+        $('main').scrollTop(0);
+        if (link === 'clubinfo'){
+            initMap();
+        }
+    };
+    xhr.send();
+})
 
 
 /* GOOGLE MAP */
